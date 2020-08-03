@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es-es">
+  <head>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+    <link rel="manifest" href="../../../../images/site.webmanifest">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Web personal de Alberto Torrejón Valenzuela">
+    <title>Guía RMarkdown | Alberto Torrejón Valenzuela</title>
+    <link rel="stylesheet" href="../../../../css/style.css" />
+    <link rel="stylesheet" href="../../../../css/fonts.css" />
+    <link rel="stylesheet" href="../../../../css/theme-override.css">
+    <header>
+
+  <nav>
+    <ul>
+      
+      
+      <li class="pull-left ">
+        <a href="../../../../">~/alberto torrejón valenzuela</a>
+      </li>
+      
+      
+      <li class="pull-left ">
+        <a href="https://drive.google.com/file/d/147LDzbqdOfNRz4P4Vxop-KhKWACjJInG/view?usp=sharing">~/currículum</a>
+      </li>
+      
+      
+      <li class="pull-left ">
+        <a href="../../../../poems/">~/poemas</a>
+      </li>
+      
+      
+      <li class="pull-left ">
+        <a href="../../../../post/">~/posts</a>
+      </li>
+      
+      
+      <li class="pull-left ">
+        <a href="../../../../tags/">~/tags</a>
+      </li>
+      
+
+      
+
+    </ul>
+  </nav>
+</header>
+
+  </head>
+
+  <body>
+    <br/>
+
+<div class="article-meta">
+<h1><span class="title">Guía RMarkdown</span></h1>
+<h2 class="author">Alberto Torrejón Valenzuela</h2>
+<h2 class="date">2020/07/30</h2>
+<p class="terms">
+  
+  
+  
+  
+  Tags: <a href="../../../../tags/r-markdown">R Markdown</a> 
+  
+  
+</p>
+</div>
+
+
+<div class="content-wrapper">
+  <main>
+    
+
+
+<div id="uso-de-markdown" class="section level1">
+<h1>Uso de Markdown</h1>
+<p>En esta página voy a mostrar algunas facilidades a la hora de escribir en <code>markdown</code>.</p>
+<ul>
+<li><p><em>italic</em> &amp; <em>italic</em></p></li>
+<li><p><strong>bold</strong> &amp; <strong>bold</strong></p></li>
+<li><p><code>código</code></p></li>
+<li><p>Superíndice: R<sup>2</sup></p></li>
+<li><p>Subíndice: H<sub>2</sub>O</p></li>
+</ul>
+<blockquote>
+<p>Cita</p>
+</blockquote>
+<ul>
+<li><p>Enlace: <code>[text](url)</code></p></li>
+<li><p>Imagen: <code>![title](url)</code></p></li>
+<li><p>Pie de página: <code>text^[footnote]</code> text<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p></li>
+<li><p>Notación matemática: <span class="math inline">\(S_n =\sum_{i=1}^n X_i\)</span></p></li>
+</ul>
+<p><span class="math display">\[\left [- \frac{\hbar^2}{2m}\right ] + \Psi = i \hbar \frac{\partial}{\partial t} \Psi\]</span></p>
+<hr />
+<ul>
+<li><p>Block-level elements: paragraphs; numbered and un- numbered section headers; ordered and unordered lists; block quotations; fenced code blocks; tables; horizontal rules.</p></li>
+<li><p>Math expressions and equations.</p></li>
+<li><p>Theorems and proofs.</p></li>
+<li><p>R code blocks that can be used to produce text output (including tables) and graphics. Note that equations, theorems, tables, and figures can be numbered and cross-referenced.</p></li>
+<li><p>Citations and bibliography.</p></li>
+<li><p>HTML widgets, and Shiny apps embedded via <code>&lt;iframe&gt;</code>: <iframe> </iframe></p></li>
+<li><p>Task list:</p>
+<ul>
+<li><input type="checkbox" disabled="" checked="" />
+Write an R package.</li>
+<li><input type="checkbox" disabled="" />
+Write a book.</li>
+<li><input type="checkbox" disabled="" />
+…</li>
+<li><input type="checkbox" disabled="" />
+Profit!</li>
+</ul></li>
+</ul>
+<hr />
+<p>Probar en <code>md</code></p>
+<pre class="ruby"><code>def word_up(value)
+  self.class.from_life(name, value, type)
+end
+
+def word_down(value)
+  self.class.from_death(name, value, type)
+end</code></pre>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>footnote<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+
+    <a href="../../../../"> >> Home</a>
+  </main>
+</div>
+    <footer>
+      
+<script>
+(function() {
+  function center_el(tagName) {
+    var tags = document.getElementsByTagName(tagName), i, tag;
+    for (i = 0; i < tags.length; i++) {
+      tag = tags[i];
+      var parent = tag.parentElement;
+      
+      if (parent.childNodes.length === 1) {
+        
+        if (parent.nodeName === 'A') {
+          parent = parent.parentElement;
+          if (parent.childNodes.length != 1) continue;
+        }
+        if (parent.nodeName === 'P') parent.style.textAlign = 'center';
+      }
+    }
+  }
+  var tagNames = ['img', 'embed', 'object'];
+  for (var i = 0; i < tagNames.length; i++) {
+    center_el(tagNames[i]);
+  }
+})();
+</script>
+
+      
+      <hr/>
+      Alberto Torrejón Valenzuela | <a href="https://github.com/albtorval">Github</a> | <a href="https://twitter.com/ajedre97">Twitter</a> | <a href="https://www.linkedin.com/in/alberto-torrej%C3%B3n-valenzuela-851680174/">LinkedIn</a>
+      
+    </footer>
+  </body>
+</html>
+

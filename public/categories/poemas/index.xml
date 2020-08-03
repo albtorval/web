@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>poemas on Alberto Torrejón Valenzuela</title>
+    <link>/categories/poemas/</link>
+    <description>Recent content in poemas on Alberto Torrejón Valenzuela</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-es</language>
+    <lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/poemas/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Poema: Callejón del gato</title>
+      <link>/poems/callej%C3%B3n-del-gato/</link>
+      <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/poems/callej%C3%B3n-del-gato/</guid>
+      <description>Callejón del gato  Un canalla y dos piratas. Tres prostitutas y un vagabundo. Bienvenido al callejón de los inmundos. Tres mesas y un taburete. Dos ceniceros y un abuelete. Bienvenido al callejón de los paquetes. Pasen y vean al loco, al barbudo, al soñador y al absorto. Políticos y obreros, acá todos cabemos. Pasen y véanse en el espejo, el callejón de los idiotas no es mas que su reflejo.</description>
+    </item>
+    
+  </channel>
+</rss>

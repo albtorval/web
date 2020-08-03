@@ -1,0 +1,41 @@
+baseurl = "/"
+languageCode = "es-es"
+title = "Alberto Torrejón Valenzuela"
+relativeURLs = true
+theme = "hugo-classic"
+googleAnalytics = ""
+ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
+enableEmoji = true
+footnotereturnlinkcontents = "↩"
+
+[permalinks]
+    post = "/post/:year/:month/:day/:slug/"
+
+[params]
+    description = "Web personal de Alberto Torrejón Valenzuela"
+    MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs"
+    MathJaxVersion = "2.7.5"
+    footer = "Alberto Torrejón Valenzuela | [Github](https://github.com/albtorval) | [Twitter](https://twitter.com/ajedre97) | [LinkedIn](https://www.linkedin.com/in/alberto-torrej%C3%B3n-valenzuela-851680174/)"
+    custom_css = ["css/theme-override.css"]
+
+[[menu.main]]
+    name = "currículum"
+    url = "https://drive.google.com/file/d/147LDzbqdOfNRz4P4Vxop-KhKWACjJInG/view?usp=sharing"
+    weight = 1
+
+[[menu.main]]
+    name = "poemas"
+    url = "/poems/"
+    weight = 2
+
+[[menu.main]]
+    name = "post"
+    url = "/post/"
+    weight = 3
+
+[[menu.main]]
+    name = "tags"
+    url = "/tags/"
+    weight = 4
+    
+    

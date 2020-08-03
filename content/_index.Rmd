@@ -1,0 +1,93 @@
+---
+title: Home
+---
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+library(fontawesome)
+```
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- ![Wizard](images/partywizard.gif) -->
+
+<center><h1 class = "rocksalt"> Alberto Torrejón Valenzuela </h1></center>
+
+<div class = "textslide"> "Y el niño crecía y se fortalecía, y se llenaba de sabiduría; y la gracia de *Dios* era sobre él". <br> **Lucas 2:40** </div>
+
+<div class="just">
+<span class = "primerapalabra">B</span>ienvenido a mi sitio web personal. El cometido de este espacio es servir de soporte para el aprendizaje que voy adquiriendo progresivamente. En la pestaña **~/post** encontrará todos aquellos artículos que escribo mientras me documento en mi aventura, es decir, escritos sobre <span class = "salmon">matemáticas</span>, <span class = "lila">estadística</span>, <span class = "fg">análisis de datos</span>, <span class = "db">inteligencia artificial</span>, <span class = "dgr">teoría de juegos</span>, ...
+
+Si ha llegado hasta esta página para hablar del **existencialismo**, quizás este no sea el foro adecuado. Para eso mejor vaya a Instagram y compruebe por sí mismo si "el hombre es un lobo para el hombre" (*homo homini lupus*). 
+
+No obstante, **no desepere**. Si no está usted interesado en leer nada que le suponga un esfuerzo ulterior a sus propias ganas de leer, también podrá encontrar en la pestaña de **~/poemas** un espacio para redimirse. Ahí podrá leer algunos de los textos que escribo. Suerte si encuentra alguno que rime. Eso sí, las ganas de leer ha de ponerlas usted. 
+
+Por último, puede que usted no esté aquí por ninguno de los motivos expuestos anteriormente, que sólo este leyendo esto para algún proceso de selección de trabajo, beca o similar. En ese caso le pido por favor que olvide lo que ha leído en los párrafos previos, que mire mi currículum presente en la pestaña **~/currículum** y me contrate.
+
+Por supuesto, como todo en la vida debería, esta página está sujeta a mejoras. Si encuentra algún fallo o tiene algún consejo no dude en contactar conmigo vía **redes sociales** que abajo indico. 
+
+Muchas gracias. Atentamente,
+
+Alberto.
+</div>
+
+<center>
+```{r echo = F}
+blogdown::shortcode('tweet', '784820493941551104')
+```
+</center>
+
+---
+
+### <span class="specialelite"> :bust_in_silhouette: Sobre mí... </span>
+
+<center> ![Este soy yo](images/alberto.jpg){ width=20% height=20% } </center>
+
+<center>
+Gafas de alambre que encajarse <br>
+barba que acicalarse, <br>
+la imagen de un intelectual <br> 
+o de un mendigo con clase. <br>
+
+Escueto rastrero, <br>
+buscavidas sin dinero, <br>
+veces de pasajero, <br>
+a veces con miedo.<br>
+
+Si algún día lo perdéis, <br>
+no busquéis, no preocupéis. <br>
+Su camino emprendido, <br>
+su corazón en los vuestros, <br>
+se habrá ido, <br>
+y con lo puesto... <br>
+</center>
+
+---
+
+### <span class="specialelite"> :mag: Busca y encontrarás... </span>
+
+<center>
+<i class="fa fa-envelope fa-2x"></i> albertorrejonval@outlook.es
+
+<a href="https://rpubs.com/albtorval">`r fa("r-project", height = "30px")`</a>
+
+<i class="fa fa-github fa-2x"></i> <a href="https://github.com/albtorval">albtorval</a>
+
+<i class="fa fa-gitlab fa-2x"></i> <a href="https://gitlab.com/albtorval">albtorval</a>
+
+<i class="fa fa-stack-overflow fa-2x"></i> <a href="https://stackoverflow.com/users/9373493/alberto-torrejon-valenzuela">Alberto Torrejón Valenzuela</a>
+
+<i class="fa fa-linkedin fa-2x"></i> <a href="https://www.linkedin.com/in/alberto-torrej%C3%B3n-valenzuela-851680174/">Alberto Torrejón Valenzuela</a>
+
+<i class="fa fa-facebook fa-2x"></i> <a href="https://www.facebook.com/alberto.torrejonvalenzuela/">Alberto Torrejón Valenzuela</a>
+
+<i class="fa fa-instagram fa-2x"></i> <a href="https://www.reddit.com/user/albtorval">albtorval</a>
+
+<i class="fa fa-reddit fa-2x"></i> <a href="https://www.instagram.com/albertorrejonval/?hl=es">albertorrrejonval</a>
+
+<i class="fa fa-twitter fa-2x"></i> <a href="https://twitter.com/ajedre97">ajedre97</a>
+
+</center>
+
+---
+
+### <span class="specialelite"> :memo: Artículos </span>
