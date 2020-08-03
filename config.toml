@@ -12,11 +12,12 @@ footnotereturnlinkcontents = "↩"
     post = "/post/:year/:month/:day/:slug/"
 
 [params]
+    fullWidthTheme = false
+    centerTheme = false
     description = "Web personal de Alberto Torrejón Valenzuela"
-    MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs"
-    MathJaxVersion = "2.7.5"
     footer = "Alberto Torrejón Valenzuela | [Github](https://github.com/albtorval) | [Twitter](https://twitter.com/ajedre97) | [LinkedIn](https://www.linkedin.com/in/alberto-torrej%C3%B3n-valenzuela-851680174/)"
     custom_css = ["css/theme-override.css"]
+    
 
 [[menu.main]]
     name = "currículum"
