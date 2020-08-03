@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Alberto Torrejón Valenzuela</title>
-    <link>/post/</link>
+    <link>/post.html</link>
     <description>Recent content in Posts on Alberto Torrejón Valenzuela</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
@@ -13,19 +13,19 @@
     
     <item>
       <title>Guía RMarkdown</title>
-      <link>/post/2020/07/30/gu%C3%ADa-rmd/</link>
+      <link>/post/2020/07/30/gu%C3%ADa-rmd.html</link>
       <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/2020/07/30/gu%C3%ADa-rmd/</guid>
+      <guid>/post/2020/07/30/gu%C3%ADa-rmd.html</guid>
       <description>Uso de Markdown En esta página voy a mostrar algunas utilidades a la hora de escribir en markdown que a menudo se me olvidan. Otras soluciones serían usar lenguaje HTML o LaTeX embedido en el achivo Rmd. Puedes encontrar más información en la guía de referencia oficial. Esta ayuda también te será muy útil para cuando escribas un post de los desesperados en StackOverflow no te regañen.  Estructura básica de un documento ## Título Texto ### Subtítulo Este es un ejemplo de texto para una lista genérica de elementos: - Elemento 1 - Elemento 2 - Elemento 3 Este es un ejemplo de texto que da entrada a una lista numerada: 1.</description>
     </item>
     
     <item>
       <title>RMarkdown y Hugo para crear un sitio web</title>
-      <link>/post/2020/07/30/rmarkdown-y-hugo-para-crear-una-p%C3%A1gina-web/</link>
+      <link>/post/2020/07/30/rmarkdown-y-hugo-para-crear-una-p%C3%A1gina-web.html</link>
       <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/2020/07/30/rmarkdown-y-hugo-para-crear-una-p%C3%A1gina-web/</guid>
+      <guid>/post/2020/07/30/rmarkdown-y-hugo-para-crear-una-p%C3%A1gina-web.html</guid>
       <description>Nuevo sitio web Elija cuidadosamente un tema en http://themes.gohugo.io y busque el enlace a su repositorio de GitHub, que tiene la forma https://github.com/user/repo.
  Cree un nuevo proyecto en RStudio y escriba el código blogdown::new_site(theme = &#39;user/repo&#39;) en la consola R, donde user/repo es del enlace en el Paso 1.
  Interactúe con el nuevo sitio por un tiempo y si no le gusta, puede repetir los pasos anteriores, de lo contrario edite las opciones en config.</description>

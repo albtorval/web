@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/categories/</loc>
+    <loc>/categories.html</loc>
     <lastmod>2020-08-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -13,52 +13,52 @@
   </url>
   
   <url>
-    <loc>/poems/callej%C3%B3n-del-gato/</loc>
+    <loc>/poems/callej%C3%B3n-del-gato.html</loc>
     <lastmod>2020-08-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/poemas/</loc>
+    <loc>/tags/poemas.html</loc>
     <lastmod>2020-08-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/poemas/</loc>
+    <loc>/categories/poemas.html</loc>
     <lastmod>2020-08-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/poems/</loc>
+    <loc>/poems.html</loc>
     <lastmod>2020-08-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>/tags.html</loc>
     <lastmod>2020-08-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2020/07/30/gu%C3%ADa-rmd/</loc>
+    <loc>/post/2020/07/30/gu%C3%ADa-rmd.html</loc>
     <lastmod>2020-07-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/html/</loc>
+    <loc>/tags/html.html</loc>
     <lastmod>2020-07-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/</loc>
+    <loc>/post.html</loc>
     <lastmod>2020-07-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/r-markdown/</loc>
+    <loc>/tags/r-markdown.html</loc>
     <lastmod>2020-07-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2020/07/30/rmarkdown-y-hugo-para-crear-una-p%C3%A1gina-web/</loc>
+    <loc>/post/2020/07/30/rmarkdown-y-hugo-para-crear-una-p%C3%A1gina-web.html</loc>
     <lastmod>2020-07-30T00:00:00+00:00</lastmod>
   </url>
   

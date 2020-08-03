@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Alberto Torrejón Valenzuela</title>
-    <link>/tags/</link>
+    <link>/tags.html</link>
     <description>Recent content in Tags on Alberto Torrejón Valenzuela</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
@@ -13,28 +13,28 @@
     
     <item>
       <title>Poemas</title>
-      <link>/tags/poemas/</link>
+      <link>/tags/poemas.html</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/poemas/</guid>
+      <guid>/tags/poemas.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>HTML</title>
-      <link>/tags/html/</link>
+      <link>/tags/html.html</link>
       <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/html/</guid>
+      <guid>/tags/html.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>R Markdown</title>
-      <link>/tags/r-markdown/</link>
+      <link>/tags/r-markdown.html</link>
       <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/r-markdown/</guid>
+      <guid>/tags/r-markdown.html</guid>
       <description></description>
     </item>
     

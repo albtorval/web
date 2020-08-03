@@ -39,7 +39,7 @@
       
       
       <li class="pull-left current">
-        <a href="./post/">~/posts</a>
+        <a href="./post/">~/post</a>
       </li>
       
       
@@ -54,6 +54,28 @@
   </nav>
 </header>
 
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   </head>
 
   <body>
@@ -78,7 +100,7 @@
      
      <li>
        <span class="date">2020/07/30</span>
-       <a href="./post/2020/07/30/rmarkdown-y-hugo-para-crear-una-p%C3%A1gina-web.html">RMarkdown y Hugo para crear una página web</a>
+       <a href="./post/2020/07/30/rmarkdown-y-hugo-para-crear-una-p%C3%A1gina-web.html">RMarkdown y Hugo para crear un sitio web</a>
      </li>
      
    </ul>

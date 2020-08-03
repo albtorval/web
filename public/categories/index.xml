@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Alberto Torrejón Valenzuela</title>
-    <link>/categories/</link>
+    <link>/categories.html</link>
     <description>Recent content in Categories on Alberto Torrejón Valenzuela</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
@@ -13,10 +13,10 @@
     
     <item>
       <title>poemas</title>
-      <link>/categories/poemas/</link>
+      <link>/categories/poemas.html</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>/categories/poemas/</guid>
+      <guid>/categories/poemas.html</guid>
       <description></description>
     </item>
     
