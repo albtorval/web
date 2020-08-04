@@ -12,6 +12,10 @@ slug: callejón-del-gato
 <center>
 <h3>**Callejón del gato**</h3>
 
+<center> 
+![particulares](images/particulares.jpg){ width=20% height=20% } 
+</center>
+
 Un canalla y dos piratas. <br>
 Tres prostitutas y un vagabundo. <br>
 Bienvenido al callejón de los inmundos. <br>
