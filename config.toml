@@ -3,11 +3,12 @@ languageCode = "es-es"
 title = "Alberto Torrejón Valenzuela"
 relativeURLs = true
 theme = "hugo-classic"
+uglyURLs = true
 googleAnalytics = ""
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 enableEmoji = true
 footnotereturnlinkcontents = "↩"
-uglyurls = true
+
 
 [permalinks]
     post = "/post/:year/:month/:day/:slug/"

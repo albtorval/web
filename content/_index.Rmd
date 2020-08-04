@@ -78,13 +78,15 @@ y con lo puesto... <br>
 
 <i class="fa fa-linkedin fa-2x"></i> <a href="https://www.linkedin.com/in/alberto-torrej%C3%B3n-valenzuela-851680174/">Alberto Torrejón Valenzuela</a>
 
+<i class="fa fa-youtube fa-2x"></i> <a href="https://www.youtube.com/channel/UCKVeevNH8YhcPlIfNQv2Z9g?view_as=subscriber">Alberto Torrejón Valenzuela</a>
+
 <i class="fa fa-facebook fa-2x"></i> <a href="https://www.facebook.com/alberto.torrejonvalenzuela/">Alberto Torrejón Valenzuela</a>
 
 <i class="fa fa-instagram fa-2x"></i> <a href="https://www.reddit.com/user/albtorval">albtorval</a>
 
-<i class="fa fa-reddit fa-2x"></i> <a href="https://www.instagram.com/albertorrejonval/?hl=es">albertorrrejonval</a>
-
 <i class="fa fa-twitter fa-2x"></i> <a href="https://twitter.com/ajedre97">ajedre97</a>
+
+<i class="fa fa-reddit fa-2x"></i> <a href="https://www.instagram.com/albertorrejonval/?hl=es">albertorrrejonval</a>
 
 </center>
 
