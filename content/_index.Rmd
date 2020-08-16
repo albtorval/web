@@ -38,6 +38,19 @@ blogdown::shortcode('tweet', '784820493941551104')
 
 ---
 
+### <span class="specialelite"> :computer: Enlaces de interés </span>
+
+- Trabajos.
+
+  + [Trabajo Fin de Grado](https://drive.google.com/file/d/17OFlvjSApvQoamaOfWOGZdrAS6EDQAeL/view?usp=sharing)
+  + [Proyecto de Inteligencia Artificial sobre Teoría de Juegos](https://albtorval.shinyapps.io/IA_Juegos_Proyecto/)
+
+- Otras páginas.
+
+  + [Una breve introducción a CSS](http://torrejonvalenzuela.sytes.net/intro_css/)
+  
+---
+
 ### <span class="specialelite"> :bust_in_silhouette: Sobre mí... </span>
 
 <center> ![Este soy yo](images/alberto.jpg){ width=20% height=20% } </center>
