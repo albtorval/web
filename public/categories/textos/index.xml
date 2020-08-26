@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>textos on Alberto Torrejón Valenzuela</title>
+    <link>/categories/textos.html</link>
+    <description>Recent content in textos on Alberto Torrejón Valenzuela</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-es</language>
+    <lastBuildDate>Wed, 26 Aug 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/textos/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Texto: Es un día</title>
+      <link>/poems/es-un-d%C3%ADa.html</link>
+      <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/poems/es-un-d%C3%ADa.html</guid>
+      <description>Es un día      Es un día. Siempre en agosto, después de mi cumpleaños. Es ella, impecable e irreverente, atractiva, altiva. Es un día y este siempre queda en la retina. Siempre empieza sin motivo aparente, tampoco hace falta, pero precisamente esto lo condiciona y no permite que sea aquello que debe ser desde el principio, dos corazones que laten al ritmo de los recuerdos.</description>
+    </item>
+    
+  </channel>
+</rss>
