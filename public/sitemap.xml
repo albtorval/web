@@ -23,17 +23,12 @@
   </url>
   
   <url>
-    <loc>/poems.html</loc>
-    <lastmod>2020-08-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags.html</loc>
     <lastmod>2020-08-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/poems/es-un-d%C3%ADa.html</loc>
+    <loc>/text/es-un-d%C3%ADa.html</loc>
     <lastmod>2020-08-26T00:00:00+00:00</lastmod>
   </url>
   
@@ -48,17 +43,22 @@
   </url>
   
   <url>
-    <loc>/poems/poema-d%C3%ADas-de-estudio.html</loc>
+    <loc>/text.html</loc>
+    <lastmod>2020-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/text/poema-d%C3%ADas-de-estudio.html</loc>
     <lastmod>2020-08-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/poems/poema.html</loc>
+    <loc>/text/poema.html</loc>
     <lastmod>2020-08-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/poems/callej%C3%B3n-del-gato.html</loc>
+    <loc>/text/callej%C3%B3n-del-gato.html</loc>
     <lastmod>2020-08-01T00:00:00+00:00</lastmod>
   </url>
   
