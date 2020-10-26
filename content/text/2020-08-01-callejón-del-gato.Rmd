@@ -12,7 +12,7 @@ slug: callejón-del-gato
 <center>
 <h3>**Callejón del gato**</h3>
 
-![](/poems/2020-08-01-callejón-del-gato_files/particulares.jpg){width=75% height=75%}
+![](/text/2020-08-01-callejón-del-gato_files/particulares.jpg){width=75% height=75%}
 
 Un canalla y dos piratas. <br>
 Tres prostitutas y un vagabundo. <br>

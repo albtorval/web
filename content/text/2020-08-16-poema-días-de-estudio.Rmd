@@ -13,7 +13,7 @@ description: ''
 <center>
 <h3>**Días de estudio**</h3>
 
-![](/poems/2020-08-16-poema-días-de-estudio_files/bami.png){ width=50% height=50% }
+![](/text/2020-08-16-poema-días-de-estudio_files/bami.png){ width=50% height=50% }
 
 Caramelos de limón, una naranja, <br>
 Apuntes en páginas amarillas. <br>

@@ -12,7 +12,7 @@ slug: poema
 <center>
 **Mientras las chimeneas duermen**
 
-![](/poems/2020-08-04-mientras-las-chimeneas-duermen_files/licabeto.png){width=75% height=75%}
+![](/text/2020-08-04-mientras-las-chimeneas-duermen_files/licabeto.png){width=75% height=75%}
 
 Mientras las chimeneas duermen, <br>
 cuando la oscuridad es noche, <br>
