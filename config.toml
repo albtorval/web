@@ -27,8 +27,8 @@ footnotereturnlinkcontents = "↩"
     weight = 1
 
 [[menu.main]]
-    name = "poemas"
-    url = "/poems/"
+    name = "textos"
+    url = "/text/"
     weight = 2
 
 [[menu.main]]
