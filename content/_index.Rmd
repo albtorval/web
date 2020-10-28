@@ -19,7 +19,7 @@ library(fontawesome)
 
 Si ha llegado hasta esta página para hablar del **existencialismo**, quizás este no sea el foro adecuado. Para eso mejor vaya a Instagram y compruebe por sí mismo si "el hombre es un lobo para el hombre" (*homo homini lupus*). 
 
-No obstante, **no desespere**. Si no está usted interesado en leer nada que le suponga un esfuerzo ulterior a sus propias ganas de leer, también podrá encontrar en la pestaña de **~/poemas** un espacio para redimirse. Ahí podrá leer algunos de los textos que escribo. Suerte si encuentra alguno que rime. Eso sí, las ganas de leer ha de ponerlas usted. 
+No obstante, **no desespere**. Si no está usted interesado en leer nada que le suponga un esfuerzo ulterior a sus propias ganas de leer, también podrá encontrar en la pestaña de **~/textos** un espacio para redimirse. Ahí podrá leer algunos de los textos que escribo. Suerte si encuentra alguno que rime. Eso sí, las ganas de leer ha de ponerlas usted. 
 
 Por último, puede que usted no esté aquí por ninguno de los motivos expuestos anteriormente, que sólo esté leyendo esto para algún proceso de selección de trabajo, beca o similar. En ese caso le pido por favor que olvide lo que ha leído en los párrafos previos, que mire mi currículum presente en la pestaña **~/currículum** y me contrate.
 
