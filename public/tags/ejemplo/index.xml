@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ejemplo on Alberto Torrejón Valenzuela</title>
+    <link>/tags/ejemplo.html</link>
+    <description>Recent content in Ejemplo on Alberto Torrejón Valenzuela</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-es</language>
+    <lastBuildDate>Fri, 13 Nov 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/ejemplo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Análisis de Componentes Principales - datos `USairpollution`</title>
+      <link>/post/2020/11/13/an%C3%A1lisis-de-componentes-principales-datos-usairpollution.html</link>
+      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2020/11/13/an%C3%A1lisis-de-componentes-principales-datos-usairpollution.html</guid>
+      <description>Ejemplo USairpollution ACP con princomp Ampliación - Usando tidymodels  Referencias   Ejemplo USairpollution Los paquetes de R que vamos a emplear son:
+# Lectura de datos library(readr) # Manipulación de datos library(tidyverse) library(magrittr) # Gráficos library(ggplot2) library(ggforce) library(ggthemes) Los datos se pueden encontar en el paquete HSAUR3.
+data(&amp;quot;USairpollution&amp;quot;, package=&amp;quot;HSAUR3&amp;quot;) También se pueden cargar desde el directorio de trabajo.
+aire.dat &amp;lt;- read_table2(&amp;quot;Datos/datosaire.txt&amp;quot;) aire.dat %&amp;gt;% head() # A tibble: 6 x 8 Ciudad SO2 Temp Empresas Pob Viento Precip Dias &amp;lt;chr&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; 1 Phoenix 10 70.</description>
+    </item>
+    
+  </channel>
+</rss>
