@@ -57,7 +57,9 @@ donde
 - $\rho_{jj} = 1 \quad \forall i=1,...,p$.
 - $\rho_{jk} = \frac{\sigma_{jk}}{\sigma_j \sigma_k} \ $ si $\ j\neq k$.
 
-Si $\rho_{ij}^2 = 0$ significa que las variables $X_i$ y $X_j$ están incorreladas. Por el contrario, si $\rho_{ij}^2 = 1$ entonces existe una dependencia lineal entre ellas $(X_i = a + bX_j \quad a,b\in \mathbb{R})$. En forma matricial se tiene que $\mathbf{R} =  \Delta^{-1}\mathbf{\Sigma}\Delta^{-1}$ con $\Delta = diag\{\sigma_1,\cdots,\sigma_p\}$. 
+Si $\rho_{ij}^2 = 0$ significa que las variables $X_i$ y $X_j$ están incorreladas. Por el contrario, si $\rho_{ij}^2 = 1$ entonces existe una dependencia lineal entre ellas $(X_i = a + bX_j \quad a,b\in \mathbb{R})$. 
+
+En forma matricial se tiene que $\mathbf{R} =  \Delta^{-1}\mathbf{\Sigma}\Delta^{-1}$ con $\Delta = diag\{\sigma_1,\cdots,\sigma_p\}$. 
 
 Otro concepto importante en la formalización será la **estandarización** de las variables, adimensionar las variables para facilitar su estudio. Se consigue considerando la variable centrada por su media y escalada por su varianza:
 
@@ -102,7 +104,7 @@ $$\lambda_1 \geq \lambda_2 \geq  \cdots \geq \lambda_p \geq 0.$$
 La suma total de todos los autovalores es $p$. Los autovectores que pertenecen a los autovalores más grandes indican los principal dirección de los datos. Sea $\underline{e}_i$ el autovector unitario, $||\underline{e}_i||^2 = 1$, asociado a $\lambda_i$. Los autovectores son **ortogonales**, $\underline{e}_i'\underline{e}_j = 0$, si $i\neq j$. Sea $E_{p\times p} = [\underline{e}_1,\underline{e}_2,\cdots,\underline{e}_p]$, $E$ es ortogonal ya que $\mathbf{E}'\mathbf{E} = \mathbf{E}\mathbf{E}' = I.$ De hecho tenemos el siguiente resultado
 
 ```{theorem}
-**Teorema de la descomposición** espectral
+**(Teorema de la descomposición espectral)**
 
 $$\mathbf\Sigma =  \mathbf{E} \mathbf\Lambda \mathbf{E}' = \sum_{i=1}^p \lambda_i \underline{e}_i \underline{e}_i'$$
 
@@ -121,15 +123,16 @@ La primera componente principal $Y_1 = t_{11}X_1 + ... + t_{1p}X_p$ con $t_{1i} 
 
 Obtener $\underline{t}_1 = (t_{11}, \cdots , t_{1p})$ tal que: 
 
-$$max(\underline{t}_1' \mathbf{\Sigma} \underline{t}_1) \\ s.a.: \underline{t}_1'\underline{t}_1 = 1$$
+$$\begin{align} & max(\underline{t}_1' \mathbf{\Sigma} \underline{t}_1) \\ & s.a.: \\ & \underline{t}_1'\underline{t}_1 = 1 \end{align}$$
+
 Aplicando el *Método de los Multiplicadores de Lagrange*, véase la resolución [aquí](http://halweb.uc3m.es/esp/Personal/personas/jmmarin/esp/AMult/tema3am.pdf), $\underline{t}_1$ es el vector propio unitario correspondiente al valor propio más grande $\lambda_1$ de la matriz de covarianza $\mathbf{\Sigma}$.
 
 La segunda componente principal tiene que capturar la mayor parte de la variabilidad no capturada por $Y_1$, por lo que $Y_2$ debe estar incorrelada con $Y_1$, i.e. $Cov(Y_2,Y_1) = \underline{t}_2' \mathbf{\Sigma} \underline{t}_1 = 0$. Luego para obtener $\underline{t}_2 = (t_{21}, \cdots , t_{2p})$ resolvemos:
 
-$$max(\underline{t}_2' \mathbf{\Sigma} \underline{t}_2) \\ s.a.: \\ \underline{t}_2'\underline{t}_2 = 1 \\ \underline{t}_2' \mathbf{\Sigma} \underline{t}_1 = 0$$
+$$\begin{align} & max(\underline{t}_2' \mathbf{\Sigma} \underline{t}_2) \\ & s.a.: \\ & \underline{t}_2'\underline{t}_2 = 1 \\ & \underline{t}_2' \mathbf{\Sigma} \underline{t}_1 = 0 \end{align}$$
 $t_2$ es el vector propio unitario correspondiente al segundo valor propio más grande $\lambda_2$ de la matriz de covarianza $\mathbf{\Sigma}$. Y de está forma, suponiendo que el resto de componentes están incorreladas con las anteriores se van calculando el resto de componentes. La $j$-ésima componente principal será el resultado de 
 
-$$max(\underline{t}_j' \mathbf{\Sigma} \underline{t}_j) \\ s.a.: \\ \underline{t}_j'\underline{t}_j = 1 \\ \underline{t}_j' \mathbf\Sigma \underline{t}_h = 0 \quad h = 1,...,j-1$$
+$$\begin{align} & max(\underline{t}_j' \mathbf{\Sigma} \underline{t}_j) \\ & s.a.: \\ & \underline{t}_j'\underline{t}_j = 1 \\ & \underline{t}_j' \mathbf\Sigma \underline{t}_h = 0 \quad h = 1,...,j-1 \end{align}$$
 Véase el **Teorema de la $j$-ésima componente principal**.
 
 **<u>Propiedades</u>**
