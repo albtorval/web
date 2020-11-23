@@ -17,7 +17,7 @@ slug: diccionario-de-ella
 
 <div class = "primerapalabra"> <span class = "salmon"> Amor </span> </div>
 <br>
-<div class="just"> Hacer las cosas sin esperar nada a cambio solamente porque te sale del corazón, ya sea pareja, amigos, familiares, etc. Estar para esa persona, es confianza, comunicación, empatía, independencia, respeto, escucha activa... el amor es lo q mueve el mundo…
+<div class="just"> Hacer las cosas sin esperar nada a cambio solamente porque te sale del corazón, ya sea pareja, amigos, familiares, etc. Estar para esa persona, es confianza, comunicación, empatía, independencia, respeto, escucha activa... el amor es lo que mueve el mundo...
 </div>
 
 <br><br>
