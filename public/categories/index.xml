@@ -6,24 +6,33 @@
     <description>Recent content in Categories on Alberto Torrejón Valenzuela</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    <lastBuildDate>Fri, 13 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 28 Nov 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Estadística</title>
-      <link>/categories/estad%C3%ADstica.html</link>
-      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
+      <title>Diccionario</title>
+      <link>/categories/diccionario.html</link>
+      <pubDate>Sat, 28 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>/categories/estad%C3%ADstica.html</guid>
+      <guid>/categories/diccionario.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Versos</title>
+      <link>/categories/versos.html</link>
+      <pubDate>Tue, 24 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/versos.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>poemas</title>
       <link>/categories/poemas.html</link>
-      <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 23 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>/categories/poemas.html</guid>
       <description></description>
@@ -32,9 +41,18 @@
     <item>
       <title>textos</title>
       <link>/categories/textos.html</link>
-      <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 23 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>/categories/textos.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Estadística</title>
+      <link>/categories/estad%C3%ADstica.html</link>
+      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/estad%C3%ADstica.html</guid>
       <description></description>
     </item>
     
