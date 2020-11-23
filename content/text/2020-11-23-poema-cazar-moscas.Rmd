@@ -1,7 +1,7 @@
 ---
 title: 'Poema: Cazar moscas'
 author: Alberto Torrejón Valenzuela
-date: '2020-11-23'
+date: '2020-11-21'
 slug: poema-cazar-moscas
 categories:
   - poemas
