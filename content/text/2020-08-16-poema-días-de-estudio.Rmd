@@ -1,13 +1,12 @@
 ---
-title: 'Poema: Días de estudio'
+title: Días de estudio
 author: Alberto Torrejón Valenzuela
 date: '2020-08-16'
-slug: poema-días-de-estudio
 categories:
   - poemas
 tags:
   - Poemas
-description: ''
+slug: poema-días-de-estudio
 ---
 
 <center>

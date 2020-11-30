@@ -1,13 +1,12 @@
 ---
-title: 'Poema: Cazar moscas'
+title: Cazar moscas
 author: Alberto Torrejón Valenzuela
 date: '2020-11-21'
-slug: poema-cazar-moscas
 categories:
   - poemas
 tags:
   - Poemas
-description: ''
+slug: poema-cazar-moscas
 ---
 
 <center> 
@@ -20,7 +19,7 @@ seguro que algún problema tendrá. <br>
 Se comprensivo, <br>
 tu lengua puede no hablar <br>
 y sus problemas querrá contar. <br>
-Mas nunca olvides, <br>
+Mas nunca olvides... <br>
 las moscas <br>
 a la mierda siempre van. 
 </center>

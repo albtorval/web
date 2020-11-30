@@ -1,5 +1,5 @@
 ---
-title: 'Poema: Callejón del gato'
+title: Callejón del gato
 author: Alberto Torrejón Valenzuela
 date: '2020-08-01'
 categories:

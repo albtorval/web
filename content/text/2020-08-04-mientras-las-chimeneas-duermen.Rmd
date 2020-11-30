@@ -1,11 +1,12 @@
 ---
-title: 'Poema: Mientras las chimeneas duermen'
+title: Mientras las chimeneas duermen
 author: Alberto Torrejón Valenzuela
 date: '2020-08-04'
 categories:
   - poemas
 tags:
   - Poemas
+  - Esfuerzo
 slug: poema
 ---
 
