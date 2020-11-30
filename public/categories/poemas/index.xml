@@ -6,13 +6,22 @@
     <description>Recent content in poemas on Alberto Torrejón Valenzuela</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    <lastBuildDate>Sat, 21 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 30 Nov 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/poemas/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Poema: A mi hermano III</title>
+      <title>El cielo no quema</title>
+      <link>/text/el-cielo-no-quema.html</link>
+      <pubDate>Mon, 30 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/text/el-cielo-no-quema.html</guid>
+      <description>El cielo no quema  No temas que el cielo no quema, alcanzarlo no es en vano y si quieres te presto mi mano. Mientras me encontrabas, te volviste a perder. Mientras te perdías, olvidaste como querer. El vacío rápido se llenó pero sin ritmo se consumó y ahora… ¿dónde esa pasión? Tranquila corazón, que el cielo no quema, lo saben las abuelas, la cocción es lenta, lo saben los encarcelados, el tiempo pesa, pero el cielo… no quema.</description>
+    </item>
+    
+    <item>
+      <title>A mi hermano III</title>
       <link>/text/poema-a-mi-hermano-iii.html</link>
       <pubDate>Sat, 21 Nov 2020 00:00:00 +0000</pubDate>
       
@@ -21,16 +30,16 @@
     </item>
     
     <item>
-      <title>Poema: Cazar moscas</title>
+      <title>Cazar moscas</title>
       <link>/text/poema-cazar-moscas.html</link>
       <pubDate>Sat, 21 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>/text/poema-cazar-moscas.html</guid>
-      <description>   Cazar moscas  Cuando te visite una mosca, escúchala, seguro que algún problema tendrá. Se comprensivo, tu lengua puede no hablar y sus problemas querrá contar. Mas nunca olvides, las moscas a la mierda siempre van.  </description>
+      <description>   Cazar moscas  Cuando te visite una mosca, escúchala, seguro que algún problema tendrá. Se comprensivo, tu lengua puede no hablar y sus problemas querrá contar. Mas nunca olvides… las moscas a la mierda siempre van.  </description>
     </item>
     
     <item>
-      <title>Texto: Es un día</title>
+      <title>Es un día</title>
       <link>/text/es-un-d%C3%ADa.html</link>
       <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
       
@@ -39,7 +48,7 @@
     </item>
     
     <item>
-      <title>Poema: Días de estudio</title>
+      <title>Días de estudio</title>
       <link>/text/poema-d%C3%ADas-de-estudio.html</link>
       <pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate>
       
@@ -48,7 +57,7 @@
     </item>
     
     <item>
-      <title>Poema: Mientras las chimeneas duermen</title>
+      <title>Mientras las chimeneas duermen</title>
       <link>/text/poema.html</link>
       <pubDate>Tue, 04 Aug 2020 00:00:00 +0000</pubDate>
       
@@ -58,7 +67,7 @@ Mientras las chimeneas duermen, cuando la oscuridad es noche, una luz permanece.
     </item>
     
     <item>
-      <title>Poema: Callejón del gato</title>
+      <title>Callejón del gato</title>
       <link>/text/callej%C3%B3n-del-gato.html</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
       

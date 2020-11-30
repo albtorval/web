@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Esfuerzo on Alberto Torrejón Valenzuela</title>
+    <link>/tags/esfuerzo.html</link>
+    <description>Recent content in Esfuerzo on Alberto Torrejón Valenzuela</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-es</language>
+    <lastBuildDate>Tue, 04 Aug 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/esfuerzo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mientras las chimeneas duermen</title>
+      <link>/text/poema.html</link>
+      <pubDate>Tue, 04 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/text/poema.html</guid>
+      <description>Mientras las chimeneas duermen
+Mientras las chimeneas duermen, cuando la oscuridad es noche, una luz permanece. Es la del estudiante, macabro intransigente. Tiene en sus hojas fórmulas con vida, notas hasta en la mesilla, los apuntes lo van a tapar, el frío desaparecerá, y tú cuando lo veas, mérito le vas a restar. Mientras las chimeneas duermen, cuando las farolas son ocre, una luz permanece. Es la de la trabajadora que corre, su día le debe al siguiente.</description>
+    </item>
+    
+  </channel>
+</rss>
