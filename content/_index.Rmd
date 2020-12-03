@@ -95,11 +95,11 @@ y con lo puesto... <br>
 
 <i class="fa fa-facebook fa-2x"></i> <a href="https://www.facebook.com/alberto.torrejonvalenzuela/">Alberto Torrejón Valenzuela</a>
 
-<i class="fa fa-instagram fa-2x"></i> <a href="https://www.reddit.com/user/albtorval">albtorval</a>
+<i class="fa fa-instagram fa-2x"></i> <a href="https://www.instagram.com/albertorrejonval/?hl=es">albertorrrejonval</a>
 
 <i class="fa fa-twitter fa-2x"></i> <a href="https://twitter.com/ajedre97">ajedre97</a>
 
-<i class="fa fa-reddit fa-2x"></i> <a href="https://www.instagram.com/albertorrejonval/?hl=es">albertorrrejonval</a>
+<i class="fa fa-reddit fa-2x"></i> <a href="https://www.reddit.com/user/albtorval">albtorval</a> 
 
 </center>
 
