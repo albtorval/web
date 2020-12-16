@@ -9,7 +9,6 @@ tags:
   - Poemas
   - Textos
 slug: es-un-día
-draft: yes
 ---
 
 <center> <h3>**Es un día **</h3> </center>
