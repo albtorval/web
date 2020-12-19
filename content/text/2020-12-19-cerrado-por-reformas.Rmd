@@ -13,7 +13,7 @@ description: ''
 <center>
 <h3>**Cerrado por reformas**</h3>
 
-<img src="/text/2020-12-19-cerrado-por-reformas_files/miniyo.jpg" alt="" width="50%" height="50%"/>
+![](/text/2020-12-19-cerrado-por-reformas_files/miniyo.jpg){width=40% height=40%}
 
 Tengo un don, <br>
 y es poder verte con ojos, <br>
