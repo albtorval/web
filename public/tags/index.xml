@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Alberto Torrejón Valenzuela</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    <lastBuildDate>Thu, 03 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 19 Dec 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,18 +14,54 @@
     <item>
       <title>Amor</title>
       <link>/tags/amor.html</link>
-      <pubDate>Thu, 03 Dec 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/amor.html</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Despedida</title>
+      <link>/tags/despedida.html</link>
+      <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/despedida.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Ella</title>
       <link>/tags/ella.html</link>
-      <pubDate>Thu, 03 Dec 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/ella.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Granada</title>
+      <link>/tags/granada.html</link>
+      <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/granada.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Inglés</title>
+      <link>/tags/ingl%C3%A9s.html</link>
+      <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/ingl%C3%A9s.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Poemas</title>
+      <link>/tags/poemas.html</link>
+      <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/poemas.html</guid>
       <description></description>
     </item>
     
@@ -62,15 +98,6 @@
       <pubDate>Sat, 21 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/hermano.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Poemas</title>
-      <link>/tags/poemas.html</link>
-      <pubDate>Sat, 21 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/poemas.html</guid>
       <description></description>
     </item>
     
