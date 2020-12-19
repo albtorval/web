@@ -15,7 +15,7 @@ description: ''
 <center>
 <h3>**Despedida**</h3>
 
-![](/text/2020-12-19-despedida_files/fin.JPG){width=50% height=50%}
+![](/text/2020-12-19-despedida_files/fin.JPG){width=40% height=40%}
 
 Que el agua del vergel, <br>
 Refleje una vez más tu tez, <br>
