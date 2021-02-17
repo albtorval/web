@@ -12,7 +12,11 @@ tags:
 description: ''
 ---
 
-```{r}
+```{r embed, out.extra='style="border: none;"', out.width='56%'}
 knitr::include_url('https://torrejonvalenzuela.com/slides/untitled#1')
+```
+
+```{r embed2, out.extra='style="border: none;"', out.width='99%'}
+knitr::include_url('https://youtube.com/embed/_FeR6EFXnck')
 ```
 

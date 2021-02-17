@@ -17,5 +17,12 @@ description: ''
 knitr::include_url('https://torrejonvalenzuela.com/slides/untitled#1')
 ```
 
-<iframe src="https://torrejonvalenzuela.com/slides/untitled#1" width="672" height="400px"></iframe>
+<iframe src="https://torrejonvalenzuela.com/slides/untitled#1" width="56%" height="400px" style="border: none;"></iframe>
+
+
+```r
+knitr::include_url('https://youtube.com/embed/_FeR6EFXnck')
+```
+
+<iframe src="https://youtube.com/embed/_FeR6EFXnck" width="99%" height="400px" style="border: none;"></iframe>
 
