@@ -26,3 +26,10 @@ knitr::include_url('https://youtube.com/embed/_FeR6EFXnck')
 
 <iframe src="https://youtube.com/embed/_FeR6EFXnck" width="99%" height="400px" style="border: none;"></iframe>
 
+
+```r
+knitr::include_app(" https://albtorval.shinyapps.io/IA_Juegos_Proyecto/", height = "600px")
+```
+
+<iframe src=" https://albtorval.shinyapps.io/IA_Juegos_Proyecto/?showcase=0" width="672" height="600px"></iframe>
+

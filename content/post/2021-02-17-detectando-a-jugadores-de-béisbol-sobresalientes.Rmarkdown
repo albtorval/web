@@ -20,3 +20,7 @@ knitr::include_url('https://torrejonvalenzuela.com/slides/untitled#1')
 knitr::include_url('https://youtube.com/embed/_FeR6EFXnck')
 ```
 
+```{r}
+knitr::include_app(" https://albtorval.shinyapps.io/IA_Juegos_Proyecto/", height = "600px")
+```
+
