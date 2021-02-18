@@ -10,6 +10,7 @@ tags:
   - béisbol
   - Xaringan
 description: ''
+draft: true
 ---
 
 ```{r embed, out.extra='style="border: none;"', out.width='56%'}
