@@ -12,7 +12,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Web personal de Alberto Torrejón Valenzuela">
+    <meta name="description" content="Análisis de componentes principales y béisbol">
     <title>Detectando a jugadores de béisbol sobresalientes | Alberto Torrejón Valenzuela</title>
     <link rel="stylesheet" href="../../../../css/style.css" />
     <link rel="stylesheet" href="../../../../css/fonts.css" />
@@ -101,12 +101,172 @@
 
 <div class="content-wrapper">
   <main>
-    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">knitr<span style="color:#f92672">::</span><span style="color:#a6e22e">include_url</span>(<span style="color:#e6db74">&#39;https://torrejonvalenzuela.com/slides/untitled#1&#39;</span>)
+    <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<blockquote>
+<p><em>&ldquo;El poder de la estadística en el béisbol es que, a diferencia del precio de la vivienda o la inflación, toma vida&rdquo;</em>. Bill James.</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># Manipulación de datos</span>
+<span style="color:#a6e22e">library</span>(tidyverse)
+<span style="color:#a6e22e">library</span>(magrittr)
+<span style="color:#75715e"># Gráficos</span>
+<span style="color:#a6e22e">library</span>(ggplot2)
+<span style="color:#a6e22e">library</span>(ggthemes)
+<span style="color:#a6e22e">library</span>(gridExtra)
+<span style="color:#75715e"># Tabla</span>
+<span style="color:#a6e22e">library</span>(kableExtra)
+</code></pre></div><h2 id="api-baseballr">API <code>baseballr</code></h2>
+<p>A principios de la década de 2000, Billy Beane y Paul DePodesta trabajaron para los Oakland Athletics, un equipo de la MLB estadounidense, revolucionando el mundo del deporte y de la estadística deportiva. Sentaron las bases en el béisbol de lo que más tarde se extendería a otros deportes como el baloncesto o el fútbol y que en la actualidad está causando gran furor en el mundo deportivo. Aplicaron a la hora de constuir su plantilla de jugadores, para lo que disponían de un presupuesto ajustado, los conceptos que años atrás curiosos del juego, como Bill James entre otros, habían formulado mientras se planteaban si el béisbol era un juego que se podía descrifrar con datos y estadística.</p>
+<p>Como no es el objetivo de este ejercicio, no se explicará en profundidad ni el juego del béisbol, que tiene su interés, ni se hará un desarrollo de las <a href="https://en.wikipedia.org/wiki/Baseball_statistics">estadísticas</a> recogidas por la sabermetría. Para lo que nos concierne, la sabermetría recoge un cuantioso número de estadísticas para cada jugador  reduciendo el potencial del jugador, y por tanto del equipo, a los números. Todos estos estadísticos se calculan teniendo en cuenta los 4 elementos básicos del juego: el pitcheo o lanzamiento, el hit o golpeo, el strike y el run o carrera, estudiando todas las posibles variables y para las distintas posiciones del juego. El hecho de que en su mayoría estas estadísticas sean combinaciones lineales ponderadas de estás 4 variables sugiere que podría existir relación entre algunas, lo que invita a estudiar una posible reducción de la dimenssionalidad. Como ejemplo se pueden mostrar dos ampliamente conocidas como son el porcentaje en base y el slug.</p>
+<p><strong>Porcentaje en base</strong> o <strong>promedio de bateo</strong>.</p>
+<p><code>$$OBP = \frac{H+BB+HBP}{AB+BB+HBP+SF}$$</code></p>
+<p>donde:</p>
+<ul>
+<li><code>\(H \equiv hits\)</code></li>
+<li><code>\(BB \equiv bolas\ por\ base\)</code></li>
+<li><code>\(HBP \equiv hit \ by \ pitch\)</code></li>
+<li><code>\(AB \equiv at \ bat\)</code></li>
+<li><code>\(SF \equiv sacrifice \ fly\)</code></li>
+</ul>
+<p><strong>Slug.</strong></p>
+<p><code>$$SLG = \frac{1B + 2 \times 2B + 3 \times 3B + 4 \times HR}{AB}$$</code></p>
+<p>donde:</p>
+<ul>
+<li><code>\(1B \equiv \# \ de \ singles\)</code></li>
+<li><code>\(2B \equiv \# \ de \ dobles\)</code></li>
+<li><code>\(3B \equiv \# \ de \ triples\)</code></li>
+<li><code>\(HR \equiv \# \ de \ homeruns\)</code></li>
+</ul>
+<p>Otro problema muy generalizado en el mundo de la estadística deportiva es que cada vez más el acceso a las bases de datos queda restringido por la monetización de la información. No obstante, hay numerosas páginas webs que se dedican de forma altruista a recoger estos datos. El paquete <a href="http://billpetti.github.io/baseballr/"><code>baseballr</code></a> extrae la información de sitios web, como FanGraphs.com, Baseball-Reference.com y baseballsavant.com. También incluye funciones para calcular métricas, como wOBA, FIP y consistencia a nivel de equipo en períodos de tiempo personalizados.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">library</span>(devtools)
+<span style="color:#75715e"># DESCOMENTAR LA SIGUIENTE LÍNEA PARA REPLICAR</span>
+<span style="color:#75715e"># install_github(&#34;BillPetti/baseballr&#34;) </span>
+<span style="color:#a6e22e">library</span>(baseballr)
+</code></pre></div><p>Vamos a analizar a los bateadores. Obtenemos la información de los estadísticos de los bateadores en la temporada 2020 como se sigue:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">bateadores <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">daily_batter_bref</span>(<span style="color:#e6db74">&#34;2020-06-23&#34;</span>, <span style="color:#e6db74">&#34;2020-09-27&#34;</span>)
+bateadores <span style="color:#f92672">%&gt;%</span> <span style="color:#a6e22e">head</span>() <span style="color:#f92672">%&gt;%</span> .[,<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">10</span>]
+</code></pre></div><pre><code>  bbref_id season             Name Age  Level        Team  G  PA  AB  R
+1   547989   2020    Marcell Ozuna  29 MLB-NL     Atlanta 60 267 228 38
+2   660670   2020 Francisco Lindor  26 MLB-AL   Cleveland 60 266 236 30
+3   642715   2020     Cavan Biggio  25 MLB-AL     Toronto 59 265 220 41
+4   613534   2020  Whit Merrifield  31 MLB-AL Kansas City 60 265 248 38
+5   571431   2020   Dansby Swanson  26 MLB-NL     Atlanta 60 264 237 49
+6   666176   2020  Freddie Freeman  30 MLB-NL     Atlanta 60 262 214 51
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># Comprobación de que los jugadores no se repiten:</span>
+bateadores <span style="color:#f92672">%&gt;%</span> <span style="color:#a6e22e">nrow</span>() <span style="color:#f92672">==</span> <span style="color:#a6e22e">length</span>(bateadores <span style="color:#f92672">%$%</span> <span style="color:#a6e22e">unique</span>(Name))
+</code></pre></div><pre><code>[1] TRUE
+</code></pre><p>Restringimos nuestra matriz de datos a aquellas variables numéricas.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">bateadores <span style="color:#f92672">%&gt;%</span> <span style="color:#a6e22e">names</span>()
+</code></pre></div><pre><code> [1] &quot;bbref_id&quot; &quot;season&quot;   &quot;Name&quot;     &quot;Age&quot;      &quot;Level&quot;    &quot;Team&quot;    
+ [7] &quot;G&quot;        &quot;PA&quot;       &quot;AB&quot;       &quot;R&quot;        &quot;H&quot;        &quot;X1B&quot;     
+[13] &quot;X2B&quot;      &quot;X3B&quot;      &quot;HR&quot;       &quot;RBI&quot;      &quot;BB&quot;       &quot;IBB&quot;     
+[19] &quot;uBB&quot;      &quot;SO&quot;       &quot;HBP&quot;      &quot;SH&quot;       &quot;SF&quot;       &quot;GDP&quot;     
+[25] &quot;SB&quot;       &quot;CS&quot;       &quot;BA&quot;       &quot;OBP&quot;      &quot;SLG&quot;      &quot;OPS&quot;     
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">bateadores <span style="color:#f92672">&lt;-</span> bateadores <span style="color:#f92672">%&gt;%</span>
+  dplyr<span style="color:#f92672">::</span><span style="color:#a6e22e">select</span>(<span style="color:#f92672">-</span><span style="color:#a6e22e">c</span>(bbref_id,season,Age,Level,Team)) <span style="color:#f92672">%&gt;%</span> 
+  <span style="color:#a6e22e">column_to_rownames</span>(<span style="color:#e6db74">&#39;Name&#39;</span>)
+</code></pre></div><p>Hay valores perdidos en las variables <code>BA</code>, <code>OBP</code>, <code>SLG</code> y <code>OPS</code>. Como no es objetivo del ejercicio, vamos a eliminar a estos individuos de nuestra muestra, aunque se podrían imputar.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">bateadores <span style="color:#f92672">%&gt;%</span> dplyr<span style="color:#f92672">::</span><span style="color:#a6e22e">select</span>(BA,OBP,SLG,OPS) <span style="color:#f92672">%&gt;%</span> <span style="color:#a6e22e">summary</span>()
+</code></pre></div><pre><code>       BA              OBP              SLG              OPS        
+ Min.   :0.0000   Min.   :0.0000   Min.   :0.0000   Min.   :0.0000  
+ 1st Qu.:0.1840   1st Qu.:0.2530   1st Qu.:0.2853   1st Qu.:0.5497  
+ Median :0.2305   Median :0.3080   Median :0.3850   Median :0.6965  
+ Mean   :0.2229   Mean   :0.2982   Mean   :0.3698   Mean   :0.6668  
+ 3rd Qu.:0.2700   3rd Qu.:0.3520   3rd Qu.:0.4620   3rd Qu.:0.8063  
+ Max.   :0.6670   Max.   :1.0000   Max.   :1.3330   Max.   :1.8330  
+ NA's   :8        NA's   :7        NA's   :8        NA's   :8       
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">missing_ids <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">list</span>()
+missing_cols <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;BA&#34;</span>,<span style="color:#e6db74">&#34;OBP&#34;</span>,<span style="color:#e6db74">&#34;SLG&#34;</span>,<span style="color:#e6db74">&#34;OPS&#34;</span>)
+<span style="color:#a6e22e">for </span>(i in <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#a6e22e">length</span>(missing_cols)){
+  missing_ids[[i]] <span style="color:#f92672">&lt;-</span> bateadores[,missing_cols[i]] <span style="color:#f92672">%&gt;%</span> <span style="color:#a6e22e">is.na</span>() <span style="color:#f92672">%&gt;%</span> <span style="color:#a6e22e">which</span>()
+}
+deleted_obs <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(missing_ids[[1]],missing_ids[[2]],missing_ids[[3]],missing_ids[[4]]) <span style="color:#f92672">%&gt;%</span> <span style="color:#a6e22e">unique</span>()
+<span style="color:#a6e22e">cat</span>(<span style="color:#e6db74">&#34;Las observaciones que tiene valores perdidos son:&#34;</span>,deleted_obs)
+</code></pre></div><pre><code>Las observaciones que tiene valores perdidos son: 581 582 583 584 585 586 587 588
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">bateadores <span style="color:#f92672">&lt;-</span> bateadores <span style="color:#f92672">%&gt;%</span> <span style="color:#a6e22e">slice</span>(<span style="color:#f92672">-</span>deleted_obs)
+</code></pre></div><p>Construimos el diagrama de cajas y bigotes.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">bateadores <span style="color:#f92672">%&gt;%</span> <span style="color:#a6e22e">pivot_longer</span>(<span style="color:#a6e22e">everything</span>(), names_to <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;item&#34;</span>, values_to <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;valor&#34;</span>) <span style="color:#f92672">%&gt;%</span> 
+    <span style="color:#a6e22e">mutate</span>(item <span style="color:#f92672">=</span> <span style="color:#a6e22e">fct_reorder</span>(item, valor, .fun <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;median&#34;</span>)) <span style="color:#f92672">%&gt;%</span> <span style="color:#a6e22e">ggplot</span>(<span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> item, 
+    y <span style="color:#f92672">=</span> valor, fill <span style="color:#f92672">=</span> item)) <span style="color:#f92672">+</span> <span style="color:#a6e22e">geom_boxplot</span>() <span style="color:#f92672">+</span> <span style="color:#a6e22e">xlab</span>(<span style="color:#e6db74">&#34;&#34;</span>) <span style="color:#f92672">+</span> <span style="color:#a6e22e">ylab</span>(<span style="color:#e6db74">&#34;&#34;</span>) <span style="color:#f92672">+</span> <span style="color:#a6e22e">theme_pander</span>() <span style="color:#f92672">+</span> 
+    <span style="color:#a6e22e">theme</span>(legend.position <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;none&#34;</span>)
+</code></pre></div><p><!-- raw HTML omitted --></p>
+<p>El gráfico sugiere que existen valores atípicos en nuestra muestra. También podemos observar que las variables se miden en escalas bastante diferentes (unidades y rango de valores bastante diferentes), sobre todo las variables <code>AB</code> y <code>PA</code>, por lo que trabajaremos con las variables estandarizadas.</p>
+<p>Faltaría estudiar la correlación de las variables, caso en el que el ACP arroja unos resultados más fiables. Calcularemos el determinante de la matriz de correlación y visualizaremos el mapa de calor con ayuda del paquete corrpot.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">library</span>(corrplot)
+R_bateadores <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">cor</span>(bateadores)
+R_bateadores <span style="color:#f92672">%&gt;%</span> <span style="color:#a6e22e">corrplot</span>(method <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;square&#34;</span>)
+</code></pre></div><p><!-- raw HTML omitted --></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">R_bateadores <span style="color:#f92672">%&gt;%</span> <span style="color:#a6e22e">det</span>()
+</code></pre></div><pre><code>[1] -8.335519e-53
+</code></pre><p>En nuestra matriz, dado que <code>det(R)</code> está cerca de cero, existe colinealidad y el ACP es apropiado para tratar con este conjunto de datos. Ahora ya estamos en condiciones de realizar nuestro Análisis de Componentes Principales.</p>
+<h2 id="acp">ACP</h2>
+<p>Se usará la función <code>princomp</code>. Se indica <code>cor=TRUE</code> para trabajar con las variables estandarizadas.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">pca_beisbol <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">princomp</span>(bateadores, cor <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>)
+pca_beisbol
+</code></pre></div><pre><code>Call:
+princomp(x = bateadores, cor = TRUE)
+
+Standard deviations:
+      Comp.1       Comp.2       Comp.3       Comp.4       Comp.5       Comp.6 
+3.573095e+00 1.598255e+00 1.289853e+00 1.002606e+00 9.589373e-01 9.151802e-01 
+      Comp.7       Comp.8       Comp.9      Comp.10      Comp.11      Comp.12 
+8.863202e-01 8.198668e-01 7.484558e-01 7.369167e-01 6.704975e-01 5.902761e-01 
+     Comp.13      Comp.14      Comp.15      Comp.16      Comp.17      Comp.18 
+5.096326e-01 4.720466e-01 3.621281e-01 3.052015e-01 2.663781e-01 2.506803e-01 
+     Comp.19      Comp.20      Comp.21      Comp.22      Comp.23      Comp.24 
+1.841724e-01 1.377867e-01 2.501310e-03 1.435223e-03 3.437449e-08 0.000000e+00 
+
+ 24  variables and  580 observations.
+</code></pre><p>Resumen del resultado.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">resumen_name <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">paste0</span>(<span style="color:#e6db74">&#34;CP&#34;</span>, <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">24</span>)
+resumen_eign <span style="color:#f92672">&lt;-</span> pca_beisbol<span style="color:#f92672">$</span>sdev^2
+resumen_CP <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">tibble</span>(CP <span style="color:#f92672">=</span> resumen_name, Eigen <span style="color:#f92672">=</span> resumen_eign) <span style="color:#f92672">%&gt;%</span> 
+  <span style="color:#a6e22e">mutate</span>(Percentage <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span> <span style="color:#f92672">*</span>Eigen<span style="color:#f92672">/</span><span style="color:#a6e22e">sum</span>(Eigen), 
+         `Cumulative Percentage` <span style="color:#f92672">=</span> <span style="color:#a6e22e">cumsum</span>(Percentage))
+resumen_CP <span style="color:#f92672">%&gt;%</span> <span style="color:#a6e22e">mutate_at</span>(<span style="color:#ae81ff">2</span><span style="color:#f92672">:</span><span style="color:#ae81ff">4</span>, round, <span style="color:#ae81ff">2</span>) <span style="color:#f92672">%&gt;%</span> <span style="color:#a6e22e">kable</span>()
 </code></pre></div><!-- raw HTML omitted -->
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">knitr<span style="color:#f92672">::</span><span style="color:#a6e22e">include_url</span>(<span style="color:#e6db74">&#39;https://youtube.com/embed/_FeR6EFXnck&#39;</span>)
+<p>En nuestro caso la primera componente principal ya explica más de la mitad de la variabilidad total, <code>\(53.20\%\)</code> de los datos. Veamos cuántas componentes seleccionaríamos observando el <strong>scree plot</strong>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">resumen_CP <span style="color:#f92672">%&gt;%</span> <span style="color:#a6e22e">ggplot</span>(<span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> <span style="color:#a6e22e">fct_reorder</span>(CP, <span style="color:#f92672">-</span>Eigen), y <span style="color:#f92672">=</span> Eigen)) <span style="color:#f92672">+</span> 
+  <span style="color:#a6e22e">geom_bar</span>(stat <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;identity&#34;</span>, width <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.01</span>) <span style="color:#f92672">+</span> 
+  <span style="color:#a6e22e">geom_point</span>() <span style="color:#f92672">+</span> 
+  <span style="color:#a6e22e">geom_hline</span>(yintercept <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, linetype <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;dashed&#34;</span>, color <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;red&#34;</span>) <span style="color:#f92672">+</span> 
+  <span style="color:#a6e22e">theme_pander</span>() <span style="color:#f92672">+</span> <span style="color:#a6e22e">xlab</span>(<span style="color:#e6db74">&#34;&#34;</span>) <span style="color:#f92672">+</span> <span style="color:#a6e22e">theme</span>(axis.text.x <span style="color:#f92672">=</span> <span style="color:#a6e22e">element_text</span>(angle <span style="color:#f92672">=</span> <span style="color:#ae81ff">90</span>, vjust <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.5</span>, hjust <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>))
+</code></pre></div><p><!-- raw HTML omitted --></p>
+<p>Si seguimos la regla de <strong>regla de Kaiser-Guttman</strong> seleccionaríamos <code>\(4\)</code> componentes. Si decidiésemos tomar aquellas que expliquen más del <code>\(80\%\)</code> de la variabilidad total nos quedaríamos con <code>\(6\)</code> componentes.</p>
+<p>Observemos la matriz de cargas de las componentes y las puntuaciones de cada individuo que se calculan en el ACP.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">pca_beisbol <span style="color:#f92672">%$%</span> loadings <span style="color:#f92672">%&gt;%</span> .[,<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">6</span>]  <span style="color:#f92672">%&gt;%</span> <span style="color:#a6e22e">kable</span>() <span style="color:#f92672">%&gt;%</span> <span style="color:#a6e22e">scroll_box</span>(width <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;100%&#34;</span>, height <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;250px&#34;</span>)
 </code></pre></div><!-- raw HTML omitted -->
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">knitr<span style="color:#f92672">::</span><span style="color:#a6e22e">include_app</span>(<span style="color:#e6db74">&#34; https://albtorval.shinyapps.io/IA_Juegos_Proyecto/&#34;</span>, height <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;600px&#34;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">pca_beisbol <span style="color:#f92672">%$%</span> scores <span style="color:#f92672">%&gt;%</span> <span style="color:#a6e22e">kable</span>() <span style="color:#f92672">%&gt;%</span> <span style="color:#a6e22e">scroll_box</span>(width <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;100%&#34;</span>, height <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;250px&#34;</span>)
 </code></pre></div><!-- raw HTML omitted -->
+<p>Visualizaremos el círculo de correlación.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">library</span>(factoextra)
+<span style="color:#a6e22e">fviz_pca_var</span>(pca_beisbol, col.var <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;salmon&#34;</span>, ggtheme <span style="color:#f92672">=</span> <span style="color:#a6e22e">theme_pander</span>())
+</code></pre></div><p><!-- raw HTML omitted --></p>
+<p>Se observa que, con respecto de la CP1 todas las variables están positivamente correlacionales, mientras que con respecto a la de la segunda se mantiene la asociación que se advirtió en el gráfico de correlaciones, estando las variables <code>BA</code>, <code>OBP</code>, <code>SLG</code> y <code>OPS</code> correlacionadas negativamente con esta componente.</p>
+<p>Por último, como nos hemos quedado con las <code>\(4\)</code> CP primeras, vamos a representar los <code>\({4\choose2} = \frac{24}{4} = 6\)</code> gráficos de dispersión de las puntuaciones de los individuos.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">puntuaciones_4 <span style="color:#f92672">&lt;-</span> pca_beisbol <span style="color:#f92672">%$%</span> scores <span style="color:#f92672">%&gt;%</span> .[,<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">4</span>]
+nombre_jugadores <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">rownames</span>(puntuaciones_4)
+puntuaciones_4 <span style="color:#f92672">&lt;-</span>  puntuaciones_4 <span style="color:#f92672">%&gt;%</span> <span style="color:#a6e22e">as.tibble</span>() 
+
+q1 <span style="color:#f92672">&lt;-</span> puntuaciones_4 <span style="color:#f92672">%&gt;%</span>  
+  <span style="color:#a6e22e">ggplot</span>(<span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> Comp.1, y <span style="color:#f92672">=</span> Comp.2, label <span style="color:#f92672">=</span> nombre_jugadores)) <span style="color:#f92672">+</span> <span style="color:#a6e22e">geom_text</span>() <span style="color:#f92672">+</span> <span style="color:#a6e22e">theme_pander</span>()
+q2 <span style="color:#f92672">&lt;-</span> puntuaciones_4 <span style="color:#f92672">%&gt;%</span>  
+  <span style="color:#a6e22e">ggplot</span>(<span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> Comp.1, y <span style="color:#f92672">=</span> Comp.3, label <span style="color:#f92672">=</span> nombre_jugadores)) <span style="color:#f92672">+</span> <span style="color:#a6e22e">geom_text</span>() <span style="color:#f92672">+</span> <span style="color:#a6e22e">theme_pander</span>()
+q3 <span style="color:#f92672">&lt;-</span> puntuaciones_4 <span style="color:#f92672">%&gt;%</span>  
+  <span style="color:#a6e22e">ggplot</span>(<span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> Comp.1, y <span style="color:#f92672">=</span> Comp.4, label <span style="color:#f92672">=</span> nombre_jugadores)) <span style="color:#f92672">+</span> <span style="color:#a6e22e">geom_text</span>() <span style="color:#f92672">+</span> <span style="color:#a6e22e">theme_pander</span>()
+q4 <span style="color:#f92672">&lt;-</span> puntuaciones_4 <span style="color:#f92672">%&gt;%</span>  
+  <span style="color:#a6e22e">ggplot</span>(<span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> Comp.2, y <span style="color:#f92672">=</span> Comp.3, label <span style="color:#f92672">=</span> nombre_jugadores)) <span style="color:#f92672">+</span> <span style="color:#a6e22e">geom_text</span>() <span style="color:#f92672">+</span> <span style="color:#a6e22e">theme_pander</span>()
+q5 <span style="color:#f92672">&lt;-</span> puntuaciones_4 <span style="color:#f92672">%&gt;%</span>  
+  <span style="color:#a6e22e">ggplot</span>(<span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> Comp.2, y <span style="color:#f92672">=</span> Comp.4, label <span style="color:#f92672">=</span> nombre_jugadores)) <span style="color:#f92672">+</span> <span style="color:#a6e22e">geom_text</span>() <span style="color:#f92672">+</span> <span style="color:#a6e22e">theme_pander</span>()
+q6 <span style="color:#f92672">&lt;-</span> puntuaciones_4 <span style="color:#f92672">%&gt;%</span>  
+  <span style="color:#a6e22e">ggplot</span>(<span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> Comp.3, y <span style="color:#f92672">=</span> Comp.4, label <span style="color:#f92672">=</span> nombre_jugadores)) <span style="color:#f92672">+</span> <span style="color:#a6e22e">geom_text</span>() <span style="color:#f92672">+</span> <span style="color:#a6e22e">theme_pander</span>()
+q1; q2; q3; q4; q5; q6
+</code></pre></div><p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>En nuestros datos, con las componentes principales que hemos construido, los jugadores <code>Adalberto Mondesi</code>, <code>Bryce Harper</code>, <code>Juan Soto</code> y <code>Freddie Freeman</code> pueden considerarse valores atípicos.</p>
+<p>Y ahora, para terminar el ejercicio, traemos a colación la frase de Bill James anterior: <em>&ldquo;El poder de la estadística en el béisbol es que, a diferencia del precio de la vivienda o la inflación, toma vida&rdquo;</em>. Y es que resulta que <code>Freddie Freeman</code>, uno de nuestros outliers, ha sido elegido <strong>Most Valuable Player</strong> (MVP) de su liga en la temporada 2020, lo que encaja con los resultados obtenidos. El resto de jugadores atípicos también han sido los mejores en los rankings de alguna o varias de estás métricas.</p>
+<!-- raw HTML omitted -->
 
     <a href="../../../../"> >> Home</a>
   </main>
