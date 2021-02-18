@@ -6,7 +6,7 @@
     <description>Recent content in Categories on Alberto Torrejón Valenzuela</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    <lastBuildDate>Wed, 17 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 18 Feb 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,18 @@
     <item>
       <title>Estadística</title>
       <link>/categories/estad%C3%ADstica.html</link>
-      <pubDate>Wed, 17 Feb 2021 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 18 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>/categories/estad%C3%ADstica.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Estadística deportiva</title>
+      <link>/categories/estad%C3%ADstica-deportiva.html</link>
+      <pubDate>Thu, 18 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/estad%C3%ADstica-deportiva.html</guid>
       <description></description>
     </item>
     
