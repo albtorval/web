@@ -22,34 +22,6 @@
     </item>
     
     <item>
-      <title>Detectando jugadores de béisbol sobresalientes</title>
-      <link>/post/2021/02/18/detectando-jugadores-de-beisbol-sobresalientes.html</link>
-      <pubDate>Thu, 18 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2021/02/18/detectando-jugadores-de-beisbol-sobresalientes.html</guid>
-      <description>{width=50% height=35%}
- &amp;ldquo;El poder de la estadística en el béisbol es que, a diferencia del precio de la vivienda o la inflación, toma vida&amp;rdquo;. Bill James.
- # Manipulación de datos library(tidyverse) library(magrittr) # Gráficos library(ggplot2) library(ggthemes) library(gridExtra) # Tabla library(kableExtra) Porcentaje en base o promedio de bateo.
-$$OBP = \frac{H+BB+HBP}{AB+BB+HBP+SF}$$
-donde:
- $H \equiv hits$ $BB \equiv bolas\ por\ base$ $HBP \equiv hit \ by \ pitch$ $AB \equiv at \ bat$ $SF \equiv sacrifice \ fly$  Slug.</description>
-    </item>
-    
-    <item>
-      <title>Detectando jugadores de béisbol sobresalientes</title>
-      <link>/post/2021/02/18/detectando-jugadores-de-beisbol-sobresalientes.html</link>
-      <pubDate>Thu, 18 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2021/02/18/detectando-jugadores-de-beisbol-sobresalientes.html</guid>
-      <description>{width=50% height=35%}
- &amp;ldquo;El poder de la estadística en el béisbol es que, a diferencia del precio de la vivienda o la inflación, toma vida&amp;rdquo;. Bill James.
- # Manipulación de datos library(tidyverse) library(magrittr) # Gráficos library(ggplot2) library(ggthemes) library(gridExtra) # Tabla library(kableExtra) Porcentaje en base o promedio de bateo.
-$$OBP = \frac{H+BB+HBP}{AB+BB+HBP+SF}$$
-donde:
- $H \equiv hits$ $BB \equiv bolas\ por\ base$ $HBP \equiv hit \ by \ pitch$ $AB \equiv at \ bat$ $SF \equiv sacrifice \ fly$  Slug.</description>
-    </item>
-    
-    <item>
       <title>Análisis de Componentes Principales - datos `USairpollution`</title>
       <link>/post/2020/11/13/an%C3%A1lisis-de-componentes-principales-datos-usairpollution.html</link>
       <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
