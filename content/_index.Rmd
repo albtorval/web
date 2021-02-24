@@ -41,7 +41,7 @@ blogdown::shortcode('tweet', '784820493941551104')
 
 - Trabajos.
 
-  + [Trabajo Fin de Grado](https://drive.google.com/file/d/17OFlvjSApvQoamaOfWOGZdrAS6EDQAeL/view?usp=sharing)
+  + [Trabajo Fin de Grado](https://torrejonvalenzuela.com/pdf/TFG.pdf)
   + [Proyecto de Inteligencia Artificial sobre Teoría de Juegos](https://albtorval.shinyapps.io/IA_Juegos_Proyecto/)
 
 - Otras páginas.

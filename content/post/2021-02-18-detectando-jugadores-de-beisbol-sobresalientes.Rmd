@@ -46,7 +46,7 @@ opts_knit$set(width=75)
 [DIAPOSITIVAS](https://torrejonvalenzuela.com/slides/acp-baseball/beisbol.html#1)
 </center>
 
-```{r, echo=FALSE}
+```{r}
 # Manipulación de datos
 library(tidyverse)
 library(magrittr)
@@ -105,6 +105,7 @@ Vamos a analizar a los bateadores. Obtenemos la información de los estadístico
 
 ```{r}
 bateadores <- daily_batter_bref("2020-06-23", "2020-09-27")
+bateadores %>% summary()
 bateadores %>% head() %>% .[,1:10]
 # Comprobación de que los jugadores no se repiten:
 bateadores %>% nrow() == length(bateadores %$% unique(Name))

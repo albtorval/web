@@ -1,24 +1,4 @@
----
-title: Detectando jugadores de béisbol sobresalientes
-author: Alberto Torrejón Valenzuela
-date: '2021-02-18'
-categories:
-  - Estadística
-  - Estadística deportiva
-tags:
-  - ACP
-  - Xaringan
-  - Béisbol
-slug: detectando-jugadores-de-beisbol-sobresalientes
-description: Análisis de componentes principales y béisbol
-mathjax: local
-output:
-  blogdown::html_page:
-    toc: no
-# draft: true
----
-
-<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+<script src="2021-02-18-detectando-jugadores-de-beisbol-sobresalientes_files/kePrint-0.0.1/kePrint.js"></script>
 
 
 <p><img src="/post/2021-02-18-detectando-jugadores-de-beisbol-sobresalientes_files/baseball.jpeg" style="width:50.0%;height:35.0%" /></p>
@@ -32,6 +12,15 @@ output:
 <center>
 <a href="https://torrejonvalenzuela.com/slides/acp-baseball/beisbol.html#1">DIAPOSITIVAS</a>
 </center>
+<pre class="r"><code># Manipulación de datos
+library(tidyverse)
+library(magrittr)
+# Gráficos
+library(ggplot2)
+library(ggthemes)
+library(gridExtra)
+# Tabla
+library(kableExtra)</code></pre>
 <div class="just">
 <p>A principios de la década de 2000, Billy Beane y Paul DePodesta trabajaron para los Oakland Athletics, un equipo de la MLB estadounidense, revolucionando el mundo del deporte y de la estadística deportiva. Sentaron las bases en el béisbol de lo que más tarde se extendería a otros deportes como el baloncesto o el fútbol y que en la actualidad está causando gran furor en el mundo deportivo. Aplicaron a la hora de constuir su plantilla de jugadores, para lo que disponían de un presupuesto ajustado, los conceptos que años atrás curiosos del juego, como Bill James entre otros, habían formulado mientras se planteaban si el béisbol era un juego que se podía descrifrar con datos y estadística.</p>
 </div>
@@ -68,7 +57,33 @@ output:
 library(baseballr)</code></pre>
 <p>Vamos a analizar a los bateadores. Obtenemos la información de los estadísticos de los bateadores en la temporada 2020 como se sigue:</p>
 <pre class="r"><code>bateadores &lt;- daily_batter_bref(&quot;2020-06-23&quot;, &quot;2020-09-27&quot;)
-bateadores %&gt;% head() %&gt;% .[,1:10]</code></pre>
+bateadores %&gt;% summary()</code></pre>
+<pre><code>   bbref_id            season              Name                Age       
+ Length:588         Length:588         Length:588         Min.   :20.00  
+ Class :character   Class :character   Class :character   1st Qu.:25.00  
+    Level               Team                 G               PA        
+ Length:588         Length:588         Min.   : 1.00   Min.   :  0.00  
+ Class :character   Class :character   1st Qu.:15.00   1st Qu.: 40.75  
+       AB               R               H              X1B       
+ Min.   :  0.00   Min.   : 0.00   Min.   : 0.00   Min.   : 0.00  
+ 1st Qu.: 35.75   1st Qu.: 4.00   1st Qu.: 6.00   1st Qu.: 4.00  
+      X2B              X3B               HR              RBI       
+ Min.   : 0.000   Min.   :0.0000   Min.   : 0.000   Min.   : 0.00  
+ 1st Qu.: 1.000   1st Qu.:0.0000   1st Qu.: 0.000   1st Qu.: 3.00  
+       BB             IBB               uBB              SO       
+ Min.   : 0.00   Min.   : 0.0000   Min.   : 0.00   Min.   : 0.00  
+ 1st Qu.: 2.00   1st Qu.: 0.0000   1st Qu.: 2.00   1st Qu.:11.00  
+      HBP               SH               SF              GDP       
+ Min.   : 0.000   Min.   :0.0000   Min.   :0.0000   Min.   : 0.00  
+ 1st Qu.: 0.000   1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.: 0.00  
+       SB               CS               BA              OBP        
+ Min.   : 0.000   Min.   :0.0000   Min.   :0.0000   Min.   :0.0000  
+ 1st Qu.: 0.000   1st Qu.:0.0000   1st Qu.:0.1840   1st Qu.:0.2530  
+      SLG              OPS        
+ Min.   :0.0000   Min.   :0.0000  
+ 1st Qu.:0.2853   1st Qu.:0.5497  
+ [ reached getOption(&quot;max.print&quot;) -- omitted 5 rows ]</code></pre>
+<pre class="r"><code>bateadores %&gt;% head() %&gt;% .[,1:10]</code></pre>
 <pre><code>  bbref_id season             Name Age  Level        Team  G  PA  AB  R
 1   547989   2020    Marcell Ozuna  29 MLB-NL     Atlanta 60 267 228 38
 2   660670   2020 Francisco Lindor  26 MLB-AL   Cleveland 60 266 236 30
@@ -113,7 +128,7 @@ cat(&quot;Las observaciones que tiene valores perdidos son:&quot;,deleted_obs)</
     mutate(item = fct_reorder(item, valor, .fun = &quot;median&quot;)) %&gt;% ggplot(aes(x = item, 
     y = valor, fill = item)) + geom_boxplot() + xlab(&quot;&quot;) + ylab(&quot;&quot;) + theme_pander() + 
     theme(legend.position = &quot;none&quot;)</code></pre>
-<p><img src="/post/2021-02-18-detectando-jugadores-de-beisbol-sobresalientes_files/figure-html/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="2021-02-18-detectando-jugadores-de-beisbol-sobresalientes_files/figure-html/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" /></p>
 <div class="just">
 <p>El gráfico sugiere que existen valores atípicos en nuestra muestra. También podemos observar que las variables se miden en escalas bastante diferentes (unidades y rango de valores bastante diferentes), sobre todo las variables <code>AB</code> y <code>PA</code>, por lo que trabajaremos con las variables estandarizadas.</p>
 </div>
@@ -123,7 +138,7 @@ cat(&quot;Las observaciones que tiene valores perdidos son:&quot;,deleted_obs)</
 <pre class="r"><code>library(corrplot)
 R_bateadores &lt;- cor(bateadores)
 R_bateadores %&gt;% corrplot(method = &quot;square&quot;)</code></pre>
-<p><img src="/post/2021-02-18-detectando-jugadores-de-beisbol-sobresalientes_files/figure-html/unnamed-chunk-7-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="2021-02-18-detectando-jugadores-de-beisbol-sobresalientes_files/figure-html/unnamed-chunk-7-1.png" width="672" style="display: block; margin: auto;" /></p>
 <pre class="r"><code>R_bateadores %&gt;% det()</code></pre>
 <pre><code>[1] -8.335519e-53</code></pre>
 <p>En nuestra matriz, dado que <code>det(R)</code> está cerca de cero, existe colinealidad y el ACP es apropiado para tratar con este conjunto de datos. Ahora ya estamos en condiciones de realizar nuestro Análisis de Componentes Principales.</p>
@@ -516,7 +531,7 @@ CP24
   geom_point() + 
   geom_hline(yintercept = 1, linetype = &quot;dashed&quot;, color = &quot;red&quot;) + 
   theme_pander() + xlab(&quot;&quot;) + theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))</code></pre>
-<p><img src="/post/2021-02-18-detectando-jugadores-de-beisbol-sobresalientes_files/figure-html/unnamed-chunk-10-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="2021-02-18-detectando-jugadores-de-beisbol-sobresalientes_files/figure-html/unnamed-chunk-10-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>Si seguimos la regla de <strong>regla de Kaiser-Guttman</strong> seleccionaríamos <span class="math inline">\(4\)</span> componentes. Si decidiésemos tomar aquellas que expliquen más del <span class="math inline">\(80\%\)</span> de la variabilidad total nos quedaríamos con <span class="math inline">\(6\)</span> componentes.</p>
 <p>Observemos la matriz de cargas de las componentes y las puntuaciones de cada individuo que se calculan en el ACP.</p>
 <pre class="r"><code>pca_beisbol %$% loadings %&gt;% .[,1:6] %&gt;% kable() %&gt;% scroll_box(width = &quot;100%&quot;, height = &quot;500px&quot;)</code></pre>
@@ -14476,7 +14491,7 @@ Aaron Whitefield
 <p>Visualizaremos el círculo de correlación.</p>
 <pre class="r"><code>library(factoextra)
 fviz_pca_var(pca_beisbol, col.var = &quot;salmon&quot;, ggtheme = theme_pander())</code></pre>
-<p><img src="/post/2021-02-18-detectando-jugadores-de-beisbol-sobresalientes_files/figure-html/unnamed-chunk-12-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="2021-02-18-detectando-jugadores-de-beisbol-sobresalientes_files/figure-html/unnamed-chunk-12-1.png" width="672" style="display: block; margin: auto;" /></p>
 <div class="just">
 <p>Se observa que, con respecto de la CP1 todas las variables están positivamente correlacionales, mientras que con respecto a la de la segunda se mantiene la asociación que se advirtió en el gráfico de correlaciones, estando las variables <code>BA</code>, <code>OBP</code>, <code>SLG</code> y <code>OPS</code> correlacionadas negativamente con esta componente.</p>
 </div>
@@ -14498,7 +14513,7 @@ q5 &lt;- puntuaciones_4 %&gt;%
 q6 &lt;- puntuaciones_4 %&gt;%  
   ggplot(aes(x = Comp.3, y = Comp.4, label = nombre_jugadores)) + geom_text() + theme_pander()
 q1; q2; q3; q4; q5; q6</code></pre>
-<p><img src="/post/2021-02-18-detectando-jugadores-de-beisbol-sobresalientes_files/figure-html/unnamed-chunk-13-1.png" width="672" style="display: block; margin: auto;" /><img src="/post/2021-02-18-detectando-jugadores-de-beisbol-sobresalientes_files/figure-html/unnamed-chunk-13-2.png" width="672" style="display: block; margin: auto;" /><img src="/post/2021-02-18-detectando-jugadores-de-beisbol-sobresalientes_files/figure-html/unnamed-chunk-13-3.png" width="672" style="display: block; margin: auto;" /><img src="/post/2021-02-18-detectando-jugadores-de-beisbol-sobresalientes_files/figure-html/unnamed-chunk-13-4.png" width="672" style="display: block; margin: auto;" /><img src="/post/2021-02-18-detectando-jugadores-de-beisbol-sobresalientes_files/figure-html/unnamed-chunk-13-5.png" width="672" style="display: block; margin: auto;" /><img src="/post/2021-02-18-detectando-jugadores-de-beisbol-sobresalientes_files/figure-html/unnamed-chunk-13-6.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="2021-02-18-detectando-jugadores-de-beisbol-sobresalientes_files/figure-html/unnamed-chunk-13-1.png" width="672" style="display: block; margin: auto;" /><img src="2021-02-18-detectando-jugadores-de-beisbol-sobresalientes_files/figure-html/unnamed-chunk-13-2.png" width="672" style="display: block; margin: auto;" /><img src="2021-02-18-detectando-jugadores-de-beisbol-sobresalientes_files/figure-html/unnamed-chunk-13-3.png" width="672" style="display: block; margin: auto;" /><img src="2021-02-18-detectando-jugadores-de-beisbol-sobresalientes_files/figure-html/unnamed-chunk-13-4.png" width="672" style="display: block; margin: auto;" /><img src="2021-02-18-detectando-jugadores-de-beisbol-sobresalientes_files/figure-html/unnamed-chunk-13-5.png" width="672" style="display: block; margin: auto;" /><img src="2021-02-18-detectando-jugadores-de-beisbol-sobresalientes_files/figure-html/unnamed-chunk-13-6.png" width="672" style="display: block; margin: auto;" /></p>
 <p>En nuestros datos, con las componentes principales que hemos construido, los jugadores <code>Adalberto Mondesi</code>, <code>Bryce Harper</code>, <code>Juan Soto</code> y <code>Freddie Freeman</code> pueden considerarse valores atípicos.</p>
 <div class="just">
 <p>Y ahora, para terminar el ejercicio, traemos a colación la frase de Bill James anterior: <em>“El poder de la estadística en el béisbol es que, a diferencia del precio de la vivienda o la inflación, toma vida”</em>. Y es que resulta que <code>Freddie Freeman</code>, uno de nuestros outliers, ha sido elegido <strong>Most Valuable Player</strong> (MVP) de su liga en la temporada 2020, lo que encaja con los resultados obtenidos. El resto de jugadores atípicos también han sido los mejores en los rankings de alguna o varias de estás métricas.</p>
