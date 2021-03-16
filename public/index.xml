@@ -6,10 +6,20 @@
     <description>Recent content in Home on Alberto Torrejón Valenzuela</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    <lastBuildDate>Thu, 18 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 16 Mar 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>VNM Póker</title>
+      <link>/post/2021/03/16/vnm-p%C3%B3ker.html</link>
+      <pubDate>Tue, 16 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2021/03/16/vnm-p%C3%B3ker.html</guid>
+      <description>Gran parte del dinero que ganarás al póker no procederá de la brillantez de tu juego, sino de la ineptitud de tus oponentes. Lou Krieger
+     DIAPOSITIVAS  VNM-Póker El juego que se plantea en este capítulo a modo de ejemplo es el Póker de Von Neumann–Morgenstern, al que nos referiremos como VNM-Póker. Fue introducido en el estudio Theory of Games and Economic Behavior.</description>
+    </item>
     
     <item>
       <title>Detectando jugadores de béisbol sobresalientes</title>
