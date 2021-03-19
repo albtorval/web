@@ -6,10 +6,46 @@
     <description>Recent content in Categories on Alberto Torrejón Valenzuela</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    <lastBuildDate>Tue, 16 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 19 Mar 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cine</title>
+      <link>/categories/cine.html</link>
+      <pubDate>Fri, 19 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/cine.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Estadística</title>
+      <link>/categories/estad%C3%ADstica.html</link>
+      <pubDate>Fri, 19 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/estad%C3%ADstica.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Matemáticas</title>
+      <link>/categories/matem%C3%A1ticas.html</link>
+      <pubDate>Fri, 19 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/matem%C3%A1ticas.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Podcast</title>
+      <link>/categories/podcast.html</link>
+      <pubDate>Fri, 19 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/podcast.html</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Póker</title>
@@ -26,15 +62,6 @@
       <pubDate>Tue, 16 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>/categories/teor%C3%ADa-de-juegos.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Estadística</title>
-      <link>/categories/estad%C3%ADstica.html</link>
-      <pubDate>Thu, 18 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/estad%C3%ADstica.html</guid>
       <description></description>
     </item>
     

@@ -55,7 +55,7 @@ class: center, middle, hide-logo
 ---
 class: center, middle, hide-logo
 
-### Empezemos...
+### Empecemos...
 
 <div class="body">
 <div id="card-container">
