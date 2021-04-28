@@ -6,10 +6,28 @@
     <description>Recent content in Categories on Alberto Torrejón Valenzuela</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    <lastBuildDate>Fri, 19 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 26 Apr 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Divulgación</title>
+      <link>/categories/divulgaci%C3%B3n.html</link>
+      <pubDate>Mon, 26 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/divulgaci%C3%B3n.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Matemáticas</title>
+      <link>/categories/matem%C3%A1ticas.html</link>
+      <pubDate>Mon, 26 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/matem%C3%A1ticas.html</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Cine</title>
@@ -26,15 +44,6 @@
       <pubDate>Fri, 19 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>/categories/estad%C3%ADstica.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Matemáticas</title>
-      <link>/categories/matem%C3%A1ticas.html</link>
-      <pubDate>Fri, 19 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/matem%C3%A1ticas.html</guid>
       <description></description>
     </item>
     

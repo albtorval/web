@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Matemáticas on Alberto Torrejón Valenzuela</title>
-    <link>/tags/matem%C3%A1ticas.html</link>
-    <description>Recent content in Matemáticas on Alberto Torrejón Valenzuela</description>
+    <title>Billar on Alberto Torrejón Valenzuela</title>
+    <link>/tags/billar.html</link>
+    <description>Recent content in Billar on Alberto Torrejón Valenzuela</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
     <lastBuildDate>Mon, 26 Apr 2021 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/matem%C3%A1ticas/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/billar/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -23,16 +23,6 @@ Te presentamos la solución a tus problemas:
  ¿Un billar? pic.twitter.com/9oypJmsKlU
 &amp;mdash; Alberto Torrejón Valenzuela (@ajedre97) July 20, 2017   
 En mi tercer año de estudios en la Facultad de Matemáticas, el profesor Jose Antonio Prado Bassas (titoeliatron) y yo, con la mayúscula ayuda de Rafael Aros Granado, un aficionado a la carpintería de San Enrique de Guadiaro (San Roque, Cádiz), decidimos replicar la idea de una mesa de billar elíptica a tamaño reducido para exponerla como maqueta interactiva en la Facultad y en las distintas ferias de exposición que se celebran en Sevilla (Feria del Estudiante y Feria de la Ciencia).</description>
-    </item>
-    
-    <item>
-      <title>VNM Póker</title>
-      <link>/post/2021/03/16/vnm-p%C3%B3ker.html</link>
-      <pubDate>Tue, 16 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2021/03/16/vnm-p%C3%B3ker.html</guid>
-      <description>Gran parte del dinero que ganarás al póker no procederá de la brillantez de tu juego, sino de la ineptitud de tus oponentes. Lou Krieger
-     DIAPOSITIVAS  VNM-Póker El juego que se plantea en este capítulo a modo de ejemplo es el Póker de Von Neumann–Morgenstern, al que nos referiremos como VNM-Póker. Fue introducido en el estudio Theory of Games and Economic Behavior.</description>
     </item>
     
   </channel>
