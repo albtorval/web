@@ -41,11 +41,12 @@ blogdown::shortcode('tweet', '784820493941551104')
 
 - Trabajos.
 
-  + [Apuntes de Teoría de Juegos](https://torrejonvalenzuela.com/pdf/TFG.pdf)
-  + [Proyecto de Inteligencia Artificial sobre Teoría de Juegos](https://albtorval.shinyapps.io/IA_Juegos_Proyecto/)
+  + [Teoría de Juegos (Trabajo Fin de Grado)](https://torrejonvalenzuela.com/pdf/TFG.pdf)
+  + [Aprendizaje con Refuerzo Profundo (Trabajo Fin de Máster)](https://torrejonvalenzuela.com/pdf/TFM.pdf)
 
-- Otras páginas.
+- Páginas
 
+  + [Dashboard sobre Teoría de Juegos](https://albtorval.shinyapps.io/IA_Juegos_Proyecto/)
   + [Una breve introducción a CSS](http://torrejonvalenzuela.sytes.net/intro_css/)
   
 ---
