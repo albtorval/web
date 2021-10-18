@@ -431,10 +431,20 @@ Dias      6.769 45.964  1.201  1.205 19.357 25.497  0.007</code></pre>
 </ul>
 <p>Las <strong>puntuaciones</strong> son los valores de las CP en las unidades de muestra.</p>
 <pre class="r"><code>pca$scores %&gt;% head() %&gt;% kable()</code></pre>
-<table>
+<table style="width:100%;">
+<colgroup>
+<col width="14%" />
+<col width="12%" />
+<col width="12%" />
+<col width="12%" />
+<col width="11%" />
+<col width="12%" />
+<col width="12%" />
+<col width="12%" />
+</colgroup>
 <thead>
 <tr class="header">
-<th></th>
+<th align="left"></th>
 <th align="right">Comp.1</th>
 <th align="right">Comp.2</th>
 <th align="right">Comp.3</th>
@@ -446,7 +456,7 @@ Dias      6.769 45.964  1.201  1.205 19.357 25.497  0.007</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Phoenix</td>
+<td align="left">Phoenix</td>
 <td align="right">-2.7159758</td>
 <td align="right">-3.8914391</td>
 <td align="right">1.0583546</td>
@@ -456,7 +466,7 @@ Dias      6.769 45.964  1.201  1.205 19.357 25.497  0.007</code></pre>
 <td align="right">0.0906066</td>
 </tr>
 <tr class="even">
-<td>LittleRock</td>
+<td align="left">LittleRock</td>
 <td align="right">-1.7177454</td>
 <td align="right">0.4824200</td>
 <td align="right">0.8500434</td>
@@ -466,7 +476,7 @@ Dias      6.769 45.964  1.201  1.205 19.357 25.497  0.007</code></pre>
 <td align="right">-0.1986651</td>
 </tr>
 <tr class="odd">
-<td>SanFrancisco</td>
+<td align="left">SanFrancisco</td>
 <td align="right">-0.9389649</td>
 <td align="right">-2.2372464</td>
 <td align="right">-0.1837479</td>
@@ -476,7 +486,7 @@ Dias      6.769 45.964  1.201  1.205 19.357 25.497  0.007</code></pre>
 <td align="right">0.0071357</td>
 </tr>
 <tr class="even">
-<td>Denver</td>
+<td align="left">Denver</td>
 <td align="right">-0.5498615</td>
 <td align="right">-1.9719430</td>
 <td align="right">-1.2285958</td>
@@ -486,7 +496,7 @@ Dias      6.769 45.964  1.201  1.205 19.357 25.497  0.007</code></pre>
 <td align="right">-0.1579881</td>
 </tr>
 <tr class="odd">
-<td>Hartford</td>
+<td align="left">Hartford</td>
 <td align="right">0.4603718</td>
 <td align="right">1.0973345</td>
 <td align="right">-0.5897038</td>
@@ -496,7 +506,7 @@ Dias      6.769 45.964  1.201  1.205 19.357 25.497  0.007</code></pre>
 <td align="right">-0.2601886</td>
 </tr>
 <tr class="even">
-<td>Wilmington</td>
+<td align="left">Wilmington</td>
 <td align="right">-0.6970761</td>
 <td align="right">0.6321489</td>
 <td align="right">-0.4213294</td>
@@ -615,8 +625,8 @@ Inputs:
 
 Operations:
 
-Centering for all_numeric
-Scaling for all_numeric
+Centering for all_numeric()
+Scaling for all_numeric()
 No PCA components were extracted.</code></pre>
 <p>Ahora estamos listos para el análisis. Usaremos la receta que construimos hasta ahora como argumento para la función <code>prep()</code>, “preparar”.</p>
 <pre class="r"><code>pca_estimates &lt;- prep(pca_trans)
@@ -647,7 +657,7 @@ pca_tidy</code></pre>
 [[1]]
 &lt;quosure&gt;
 expr: ^all_numeric()
-env:  0x7f9f96a802e8
+env:  0x7fb3b28d11c0
 
 
 $role
@@ -690,11 +700,14 @@ Dias     -0.50494668 -0.008217393
 $prefix
 [1] &quot;PC&quot;
 
+$keep_original_cols
+[1] FALSE
+
 $skip
 [1] FALSE
 
 $id
-[1] &quot;pca_xWcrb&quot;
+[1] &quot;pca_0gtrC&quot;
 
 attr(,&quot;class&quot;)
 [1] &quot;step_pca&quot; &quot;step&quot;    </code></pre>

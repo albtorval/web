@@ -19,6 +19,7 @@ output:
 ---
 
 <script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+<link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
 
 
 <p><img src="/post/2021-02-18-detectando-jugadores-de-beisbol-sobresalientes_files/baseball.jpeg" style="width:50.0%;height:35.0%" /></p>
@@ -105,12 +106,12 @@ bateadores %&gt;% summary() %&gt;% .[,1:15]</code></pre>
  [ reached getOption(&quot;max.print&quot;) -- omitted 2 rows ]</code></pre>
 <pre class="r"><code>bateadores %&gt;% head() %&gt;% .[,1:10]</code></pre>
 <pre><code>  bbref_id season             Name Age  Level        Team  G  PA  AB  R
-1   547989   2020    Marcell Ozuna  29 MLB-NL     Atlanta 60 267 228 38
-2   660670   2020 Francisco Lindor  26 MLB-AL   Cleveland 60 266 236 30
-3   642715   2020     Cavan Biggio  25 MLB-AL     Toronto 59 265 220 41
-4   613534   2020  Whit Merrifield  31 MLB-AL Kansas City 60 265 248 38
-5   571431   2020   Dansby Swanson  26 MLB-NL     Atlanta 60 264 237 49
-6   666176   2020  Freddie Freeman  30 MLB-NL     Atlanta 60 262 214 51</code></pre>
+1   547989   2020    Marcell Ozuna  29 Maj-NL     Atlanta 60 267 228 38
+2   660670   2020 Francisco Lindor  26 Maj-AL   Cleveland 60 266 236 30
+3   642715   2020     Cavan Biggio  25 Maj-AL     Toronto 59 265 220 41
+4   613534   2020  Whit Merrifield  31 Maj-AL Kansas City 60 265 248 38
+5   571431   2020   Dansby Swanson  26 Maj-NL     Atlanta 60 264 237 49
+6   666176   2020  Freddie Freeman  30 Maj-NL     Atlanta 60 262 214 51</code></pre>
 <pre class="r"><code># Comprobación de que los jugadores no se repiten:
 bateadores %&gt;% nrow() == length(bateadores %$% unique(Name))</code></pre>
 <pre><code>[1] TRUE</code></pre>
@@ -1903,7 +1904,7 @@ Kyle Lewis
 </tr>
 <tr>
 <td style="text-align:left;">
-Nicholas Castellanos
+Nick Castellanos
 </td>
 <td style="text-align:right;">
 5.6189114
@@ -5882,7 +5883,7 @@ Nomar Mazara
 </tr>
 <tr>
 <td style="text-align:left;">
-Matthew Joyce
+Matt Joyce
 </td>
 <td style="text-align:right;">
 1.1942099
@@ -8021,7 +8022,7 @@ Josh Naylor
 </tr>
 <tr>
 <td style="text-align:left;">
-Josh Fuentes
+Joshua Fuentes
 </td>
 <td style="text-align:right;">
 -0.0324895
@@ -9401,7 +9402,7 @@ Randy Arozarena
 </tr>
 <tr>
 <td style="text-align:left;">
-Nate Lowe
+Nathaniel Lowe
 </td>
 <td style="text-align:right;">
 -1.0711043
@@ -9677,7 +9678,7 @@ Luis Guillorme
 </tr>
 <tr>
 <td style="text-align:left;">
-José García
+José Barrero
 </td>
 <td style="text-align:right;">
 -3.0464398
@@ -11540,7 +11541,7 @@ Jonathan Davis
 </tr>
 <tr>
 <td style="text-align:left;">
-Andy Young
+Andrew Young
 </td>
 <td style="text-align:right;">
 -2.8655136
